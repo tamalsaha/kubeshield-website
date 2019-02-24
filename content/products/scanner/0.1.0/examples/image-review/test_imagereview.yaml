@@ -1,0 +1,6 @@
+apiVersion: scanner.soter.ac/v1alpha1
+kind: ImageReview
+metadata:
+  name: test
+request:
+   image: nginx

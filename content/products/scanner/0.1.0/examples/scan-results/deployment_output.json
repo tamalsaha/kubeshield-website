@@ -1,0 +1,192 @@
+{
+  "metadata": {
+    "name": "kube-dns",
+    "namespace": "kube-system",
+    "selfLink": "/apis/scanner.soter.ac/v1alpha1/namespaces/kube-system/deployments/kube-dns",
+    "creationTimestamp": null
+  },
+  "response": {
+    "images": [
+      {
+        "name": "k8s.gcr.io/k8s-dns-dnsmasq-nanny-amd64:1.14.8",
+        "features": [
+          {
+            "Name": "busybox",
+            "NamespaceName": "alpine:v3.6",
+            "Version": "1.26.2-r9"
+          },
+          {
+            "Name": "alpine-keys",
+            "NamespaceName": "alpine:v3.6",
+            "Version": "2.1-r1"
+          },
+          {
+            "Name": "apk-tools",
+            "NamespaceName": "alpine:v3.6",
+            "Version": "2.7.4-r0"
+          },
+          {
+            "Name": "scanelf",
+            "NamespaceName": "alpine:v3.6",
+            "Version": "1.2.2-r0"
+          },
+          {
+            "Name": "alpine-baselayout",
+            "NamespaceName": "alpine:v3.6",
+            "Version": "3.0.4-r0"
+          },
+          {
+            "Name": "libc-utils",
+            "NamespaceName": "alpine:v3.6",
+            "Version": "0.7.1-r0"
+          },
+          {
+            "Name": "musl",
+            "NamespaceName": "alpine:v3.6",
+            "Version": "1.1.16-r14"
+          },
+          {
+            "Name": "zlib",
+            "NamespaceName": "alpine:v3.6",
+            "Version": "1.2.11-r0"
+          },
+          {
+            "Name": "libressl2.5-libcrypto",
+            "NamespaceName": "alpine:v3.6",
+            "Version": "2.5.5-r0"
+          },
+          {
+            "Name": "musl-utils",
+            "NamespaceName": "alpine:v3.6",
+            "Version": "1.1.16-r14"
+          },
+          {
+            "Name": "libressl2.5-libssl",
+            "NamespaceName": "alpine:v3.6",
+            "Version": "2.5.5-r0"
+          }
+        ]
+      },
+      {
+        "name": "k8s.gcr.io/k8s-dns-kube-dns-amd64:1.14.8",
+        "features": [
+          {
+            "Name": "alpine-keys",
+            "NamespaceName": "alpine:v3.7",
+            "Version": "2.1-r1"
+          },
+          {
+            "Name": "alpine-baselayout",
+            "NamespaceName": "alpine:v3.7",
+            "Version": "3.0.5-r2"
+          },
+          {
+            "Name": "musl-utils",
+            "NamespaceName": "alpine:v3.7",
+            "Version": "1.1.18-r2"
+          },
+          {
+            "Name": "scanelf",
+            "NamespaceName": "alpine:v3.7",
+            "Version": "1.2.2-r1"
+          },
+          {
+            "Name": "libressl2.6-libssl",
+            "NamespaceName": "alpine:v3.7",
+            "Version": "2.6.3-r0"
+          },
+          {
+            "Name": "apk-tools",
+            "NamespaceName": "alpine:v3.7",
+            "Version": "2.8.1-r1"
+          },
+          {
+            "Name": "libc-utils",
+            "NamespaceName": "alpine:v3.7",
+            "Version": "0.7.1-r0"
+          },
+          {
+            "Name": "busybox",
+            "NamespaceName": "alpine:v3.7",
+            "Version": "1.27.2-r6"
+          },
+          {
+            "Name": "musl",
+            "NamespaceName": "alpine:v3.7",
+            "Version": "1.1.18-r2"
+          },
+          {
+            "Name": "zlib",
+            "NamespaceName": "alpine:v3.7",
+            "Version": "1.2.11-r1"
+          },
+          {
+            "Name": "libressl2.6-libcrypto",
+            "NamespaceName": "alpine:v3.7",
+            "Version": "2.6.3-r0"
+          }
+        ]
+      },
+      {
+        "name": "k8s.gcr.io/k8s-dns-sidecar-amd64:1.14.8",
+        "features": [
+          {
+            "Name": "musl",
+            "NamespaceName": "alpine:v3.7",
+            "Version": "1.1.18-r2"
+          },
+          {
+            "Name": "musl-utils",
+            "NamespaceName": "alpine:v3.7",
+            "Version": "1.1.18-r2"
+          },
+          {
+            "Name": "libressl2.6-libcrypto",
+            "NamespaceName": "alpine:v3.7",
+            "Version": "2.6.3-r0"
+          },
+          {
+            "Name": "scanelf",
+            "NamespaceName": "alpine:v3.7",
+            "Version": "1.2.2-r1"
+          },
+          {
+            "Name": "libc-utils",
+            "NamespaceName": "alpine:v3.7",
+            "Version": "0.7.1-r0"
+          },
+          {
+            "Name": "busybox",
+            "NamespaceName": "alpine:v3.7",
+            "Version": "1.27.2-r6"
+          },
+          {
+            "Name": "zlib",
+            "NamespaceName": "alpine:v3.7",
+            "Version": "1.2.11-r1"
+          },
+          {
+            "Name": "libressl2.6-libssl",
+            "NamespaceName": "alpine:v3.7",
+            "Version": "2.6.3-r0"
+          },
+          {
+            "Name": "apk-tools",
+            "NamespaceName": "alpine:v3.7",
+            "Version": "2.8.1-r1"
+          },
+          {
+            "Name": "alpine-keys",
+            "NamespaceName": "alpine:v3.7",
+            "Version": "2.1-r1"
+          },
+          {
+            "Name": "alpine-baselayout",
+            "NamespaceName": "alpine:v3.7",
+            "Version": "3.0.5-r2"
+          }
+        ]
+      }
+    ]
+  }
+}

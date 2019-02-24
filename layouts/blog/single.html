@@ -1,0 +1,120 @@
+
+{{ partial "header.html" .}}
+
+<section class="inner-header-area">
+    {{ partial "menu.html" . }}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="single-blog-header">
+                    <div class="blog-tag">
+                        {{ partial "tags.html" . }}
+                    </div>
+                    <div class="blog-title">
+                        <h1>{{ title (default .Title (index .Params "header")) }}</h1>
+                        <h3>{{ $.Param "description" }}</h3>
+                    </div>
+                    <div class="blog-author">
+                        <div class="blog-details">
+
+                            {{if isset .Params "authors" }} {{ $.Scratch.Add "author" (index .Params.authors 0) }} {{ $.Scratch.Add "author-term" ((index .Params.authors 0) | urlize) }}
+                            <a href="/authors/{{ $.Scratch.Get "author-term" }}">
+                                <!-- <img src="../../images/blog/authors/tamal-saha.png"> -->
+
+                            {{ $author := (index $.Site.Data.author (.Title | urlize) ) }}
+                                <img class="authors" src="/images/blog/authors/{{ $.Scratch.Get "author-term"}}.png">
+                            </a>
+
+                            <a href="/authors/{{ $.Scratch.Get "author-term" }}">{{ $.Scratch.Get "author" }}</a>
+                            {{ else }}
+                            <a href="#">{{ $.Param "author" }}</a>
+                            {{ end }}
+                        </div>
+                        <div class="blog-details details-wrap-cell">
+                            <span>
+                              on Mon, Aug 1, 2016
+                            </span>
+                        </div>
+                    </div>
+                    <div class="blog-share">
+                        <div class="blog-share">
+                            <div class="share">
+                                <ul>
+                                    <li><span class="btn-share st_facebook_custom"> <i class="fa fa-facebook"></i></span></li>
+                                    <li><span class="btn-share st_twitter_custom"> <i class="fa fa-twitter"></i></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10">
+                <div class="single-blog article">
+                    {{ .Content }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <div class="blog-categories">
+                <h3>Categories</h3>
+                {{ partial "categories.html" . }}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            {{ partial "recent-posts.html" .}}
+        </div>
+    </div>
+</div> -->
+
+{{ partial "subscribers.html" . }}
+
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            {{ template "_internal/disqus.html" . }}
+        </div>
+    </div>
+</div>
+
+
+
+<!--for share this -->
+<script type="text/javascript">
+var switchTo5x = true;
+</script>
+<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">
+stLight.options({
+publisher: "9203fb16-a5e2-4355-80e1-84b31ccd79e6",
+doNotHash: false,
+doNotCopy: false,
+hashAddressBar: false
+});
+</script>
+<!--end share this -->
+
+{{ partial "footer.html" .}}

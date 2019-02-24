@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: labels-daemonset
+  labels:
+    app: scanner
+spec:
+  selector:
+    matchLabels:
+      app: scanner
+  template:
+    metadata:
+      labels:
+        app: scanner
+    spec:
+      containers:
+      - name: labels
+        image: shudipta/labels-vuln
+        ports:
+        - containerPort: 80

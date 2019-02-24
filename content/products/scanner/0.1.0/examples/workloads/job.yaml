@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: hello-job
+  namespace: kube-system
+  labels:
+    app: scanner
+spec:
+  template:
+    metadata:
+      labels:
+        app: scanner
+    spec:
+      containers:
+      - name: hello
+        image: shudipta/hello:test
+        ports:
+        - containerPort: 80
+      restartPolicy: Never

@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: labels-replicationcontroller
+  namespace: kube-system
+  labels:
+    app: scanner
+spec:
+  replicas: 1
+  selector:
+    app: scanner
+  template:
+    metadata:
+      labels:
+        app: scanner
+    spec:
+      containers:
+      - name: labels
+        image: shudipta/labels-vuln
+        ports:
+        - containerPort: 80

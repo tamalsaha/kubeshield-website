@@ -1,0 +1,44 @@
+{
+  "pharm": [
+    {
+      "path": "clusters/*/glusterfs",
+      "env": {
+        "onebox": ["*"],
+        "prod":   ["appscode"],
+        "qa":     ["*"],
+        "dev":    ["*"]
+      }
+    },
+    {
+      "path": "*",
+      "env": {
+        "onebox": ["*"],
+        "prod":   ["*"],
+        "qa":     ["*"],
+        "dev":    ["*"]
+      }
+    }
+  ],
+  "ci": [
+    {
+      "path": "*",
+      "env": {
+        "onebox": ["*"],
+        "prod":   ["*"],
+        "qa":     ["*"],
+        "dev":    ["*"]
+      }
+    }
+  ],
+  "attic": [
+    {
+      "path": "*",
+      "env": {
+        "onebox": ["*"],
+        "prod":   ["*"],
+        "qa":     ["*"],
+        "dev":    ["*"]
+      }
+    }
+  ]
+}

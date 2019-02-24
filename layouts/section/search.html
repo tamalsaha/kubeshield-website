@@ -1,0 +1,48 @@
+<style>
+    .inner-slider{
+        background: url(/images/products/header.svg) no-repeat scroll center center/cover border-box, -webkit-linear-gradient(30deg, #1d72da 0%, #0066b7 100%) no-repeat scroll center center/cover !important;
+    }
+</style>
+
+{{ partial "header.html" .}}
+<div class="inner-slider">
+    <!-- Menu Bar -->
+    <div class="top-nav-area" data-offset-top="20" data-spy="affix">
+        {{ partial "menu.html" . }}
+    </div>
+    <!-- /End of top-nav-area container -->
+    <!-- Start of Slider Area -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="inner-banner">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /End of Slider Area -->
+</div>
+
+<div class="gsc-search">
+    <div class="row justify-content-center"> 
+        <div class="col-md-5 col-12">
+            <gcse:search></gcse:search>
+        </div>
+    </div>            
+</div>
+
+<script>
+    (function() {
+        var cx = '015199383701854252104:jccvu4eiulw';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+    })();
+</script>
+
+{{ partial "schedule.html" . }}
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="18px" viewBox="0 0 24 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_arrow_left</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic_arrow_left" transform="translate(11.000000, 9.500000) rotate(-180.000000) translate(-11.000000, -9.500000) translate(0.000000, 2.000000)" stroke-width="2" stroke="#2C4267">
+            <g id="Desing">
+                <g id="1-4-Homepage-">
+                    <g id="Testomonila">
+                        <g id="Arrow">
+                            <g id="Left">
+                                <g id="Group-13" transform="translate(11.000000, 7.888857) rotate(0.000000) translate(-11.000000, -7.888857) translate(0.000000, 0.888857)">
+                                    <g id="Group" transform="translate(0.000000, 0.000000)">
+                                        <g id="Group-15" transform="translate(0.000000, -0.000000)">
+                                            <g id="Group-26">
+                                                <path d="M21.5342342,7 L1.52400491e-15,7.06997375" id="Shape"></path>
+                                                <polyline id="Shape" stroke-linecap="square" points="7.07142857 14 3.0678068e-16 7 7.07142857 0"></polyline>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

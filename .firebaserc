@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "dev": "tigerworks-kube",
+    "prod": "appscode-domains",
+    "default": "tigerworks-kube"
+  }
+}

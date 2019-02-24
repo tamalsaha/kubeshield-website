@@ -1,0 +1,181 @@
+<section id="video-area" class=" ac-product-area ac-video-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="product-content">
+                    <h2>A complete toolkit, built
+                        for developers.</h2>
+                    <p>Integrated Development Platform for collaborative coding, testing & deploying containerized apps.
+                        The inventor of web browser, Marc Andreessen, once said that software is eating the world.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="product-abstract product-abstract-right ac-video-toolkit">
+                    <img src="images/toolkit-abstract.png">
+                    <button type="button" class="video__play">
+                        <i class="fa fa-play"></i>PLAY VIDEO
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="ac-services ac-integrate">
+                    <h3>Integrate quickly</h3>
+                    <p>Take advantage of pre-made UI components to launch faster and simplify operations. Sign up new
+                        users on your platform and get them paid—quickly.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="ac-services ac-customize">
+                    <h3>Customize</h3>
+                    <p>Connect is API-first and lets you design the best experience for your platform. You can customize
+                        onboarding, set payout timing</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="ac-services ac-teams">
+                    <h3>Built for teams</h3>
+                    <p>Team access for a full overview or just limited to certain transactions. Access for accountant
+                        for read-and-export-only.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ac-product">
+    <section id="collaborative-coding" class="ac-product-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="product-content">
+                        <h2>Collaborative Coding.</h2>
+                        <p>Host your private git repositories, review changes in your codebase, assign tasks among team
+                            members and manage your projects using AppsCode's all-in-one platform.</p>
+                        <a href="/products/coding/">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-offset-1">
+                    <div class="product-abstract product-abstract-right">
+                        <img src="/images/collaborative-coding-abstract.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="continuous-integration" class="ac-product-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 ac-product-web">
+                    <div class="product-abstract product-abstract-right">
+                        <img src="/images/continuous-integration-abstract.svg">
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-offset-1">
+                    <div class="product-content">
+                        <h2>Continuous Integration.</h2>
+                        <p>Automatically testing changes before merging, continuously packaging & deploying apps is easy
+                            when you have AppsCode.</p>
+                        <a href="/products/ci/">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-5 ac-product-mobile">
+                    <div class="product-abstract product-abstract-right">
+                        <img src="/images/continuous-integration-abstract.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cloud-deployment" class="ac-product-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="product-content">
+                        <h2>Cloud Deployment</h2>
+                        <p>Kubernetes based micro-services platform gives you the freedom to run your applications in
+                            any public cloud or on-premise datacenter.</p>
+                        <a href="/products/cloud-deployment/">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-offset-1">
+                    <div class="product-abstract product-abstract-right">
+                        <img src="/images/cloud-deployment-abstract.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="logging-monitoring" class="ac-product-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 ac-product-web">
+                    <div class="product-abstract product-abstract-right">
+                        <img src="/images/logging-monitoring-abstract.svg">
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-offset-1">
+                    <div class="product-content">
+                        <h2>Logging & Monitoring</h2>
+                        <p>Monitor your apps with Grafana, store logs in ElasticSearch, search logs via Kibana and get
+                            alerted when things go wrong.</p>
+                        <a href="/products/ogging-monitoring/">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-5 ac-product-mobile">
+                    <div class="product-abstract product-abstract-right">
+                        <img src="/images/logging-monitoring-abstract.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+<div class="ac-modal">
+    <div class="modal">
+        <video class="container-lg" preload="metadata" controls>
+            <source src="/media/demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+
+<script>
+  // for video play
+
+  $(document).ready(function () {
+    $(".video__play").on("click", function () {
+      $(".video").addClass("is-started"),
+        $("iframe").attr("src", $(".modal").data("url")),
+        setTimeout(function () {
+          $(".modal").addClass("is-active")
+        }, 100)
+      $('body').css('overflow-x', 'auto');
+      $('body').css('overflow-y', 'hidden');
+    }),
+      $(".modal").on("click", function (e) {
+        if (e.target.className !== 'container-lg') {
+          $(".video").removeClass("is-started"),
+            $(".modal").removeClass("is-active"),
+            $("iframe").removeAttr("src")
+          $('body').css('overflow-x', 'auto');
+          $('body').css('overflow-y', 'auto');
+          $(".container-lg")[0].pause();
+        }
+      });
+  });
+</script>

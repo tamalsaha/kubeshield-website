@@ -1,0 +1,115 @@
+
+::selection {
+  background: #939ea9;
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: #939ea9;
+  color: #ffffff;
+}
+
+.clear {
+  clear: both;
+}
+
+body {
+  font-family: Raleway,sans-serif !important;
+  background-color: $white;
+  font-size: 17px;
+  line-height: 26px;
+  overflow-x: hidden;
+  background: #fff;
+}
+
+strong {
+  font-size: 16px;
+  line-height: 25px;
+  color: #32325d;
+  font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #32325d;
+  margin-bottom: 20px;
+  line-height: 40px;
+}
+
+
+P {
+  line-height: 30px;
+  font-weight: 400;
+  font-size: 17px;
+  color: #32325d;
+  margin-bottom: 20px;
+  a {
+    outline: none;
+    color: #3d78e5;
+    &:hover, &:focus {
+      color: $color_ocean_green;
+      text-decoration: none;
+    }
+  }
+}
+
+
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.page-wrapper {
+  overflow: hidden;
+}
+
+a {
+  outline: none;
+  color: #3d78e5;
+  &:hover, &:focus {
+    color: $color_ocean_green;
+    text-decoration: none;
+  }
+}
+
+.img-reponsive {
+  height: auto;
+  max-width: 100%;
+}
+
+.additional-title {
+  margin: 80px 0 40px 0;
+}
+
+// tooltip-inner
+.tooltip-inner {
+  background-color: #fff !important;
+  transition: 250ms ease;
+  color: #32325d;
+  box-shadow: 0 16px 32px 0 rgba(62, 57, 107, 0.2), 0 0px 10px rgba(0, 0, 0, 0.05);
+}
+
+.tooltip.top .tooltip-arrow {
+  border-top-color: #fff;
+}
+
+.tooltip.right .tooltip-arrow {
+  border-right-color: #fff;
+}
+
+.tooltip.bottom .tooltip-arrow {
+  border-bottom-color: #fff !important;
+}
+
+.tooltip.left .tooltip-arrow {
+  border-left-color: #ffff;
+}

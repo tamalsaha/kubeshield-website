@@ -1,0 +1,49 @@
+<div class="container-min">
+    <div class="logo-signin text-center">
+        <a class="" href="/"><img src="/images/logo-color.svg"></a>
+    </div>
+    <div class="signup-area">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Start your own team!</h3>
+                <p>Provide your basic informations below.</p>
+                <form class="email">
+                    <div id="email-section">
+                        <div class="form-group has-feedback">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control email-box" name="input-email" id="email" placeholder="name@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <label for="username">User Name</label>
+                        <input type="text" class="form-control email-box" id="username" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="form-group has-feedback" id="myform">
+                        <label for="username">Password &nbsp;<i class="fa fa-info-circle" data-toggle="tooltip" title="Password strength should be strong. It must contain a number, an upper and lower case character"></i></label>
+                        <input type="password" class="form-control email-box" id="password" name="password" placeholder="Password" required>
+                    </div>
+
+                    <div class="checkbox-newsletter">
+                        <input type="checkbox" id="enable-newsletter" value="" checked="checked">Sign up for our free technical newsletter
+                    </div>
+
+                    <div class="text-center">
+                        <div class="g-recaptcha email-recaptcha" data-sitekey="6Lfvmx8TAAAAAIzqTvXSXy3oYO8PvnWcgBJqPbEo"></div>
+                    </div>
+                    <button type="submit" class="continue" id="btn-p1">Proceed</button>
+                </form>
+                <span>Already have an team?<a href="/signin/">Join an existing team</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="signin-legal">
+        By clicking "Proceed" I agree to AppsCode's <a href="/legal/tos/" target="_blank">Terms of Service</a>
+    </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $("#password").strength();
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>

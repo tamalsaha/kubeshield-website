@@ -1,0 +1,27 @@
+.api-area {
+  margin: 80px 0;
+  .info {
+    display: none;
+  }
+  .swagger-section #message-bar {
+    display: none;
+  }
+}
+.swagger-section .swagger-ui-wrap ul#resources li.resource ul.endpoints li.endpoint ul.operations li.operation div.heading h3 {
+  margin: 0 !important;
+}
+.swagger-section .swagger-ui-wrap ul#resources li.resource {
+  border-bottom: 0px solid #dddddd;
+}
+.swagger-section .swagger-ui-wrap .footer {
+  h4 {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #727d98 !important;
+    span {
+      margin-top: 0;
+      color: #727d98 !important;
+      font-size: 14px;
+    }
+  }
+}

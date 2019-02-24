@@ -1,0 +1,85 @@
+
+{{ partial "header.html" .}}
+
+<section class="inner-header-area">
+    {{ partial "menu.html" . }}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="inner-banner">
+                    <h1> {{.Title}}</h1>
+                    <p>{{ $.Param "description" }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="contact-page text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Have a Question?</h2>
+                <p>Send us a note and we will be in touch shortly.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="contact">
+                    <h3>Need Support?</h3>
+                    <p>We're here to help with any issues with your account. You can also check our <a href="/docs">docs</a> or <a href="/community">ask community</a></p>
+                    <a class="contact-link" href="/contact/support/">Contact Support</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="contact conttact-sales">
+                    <h3>Sales Inquiries</h3>
+                    <p>Contact our sales team to run AppsCode on your servers. Check out our <a href="/services">professional services.</a></p>
+                    <a class="contact-link" href="/contact/sales/">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="contact-address">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="bridge-img">
+                    <img src="/images/bridge.svg">
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="contact-mailling">
+                    <ul>
+                        <li>
+                            <h3>Corporate HQ</h3>
+                            <h4>AppsCode Inc.</h4>
+                            <p>PO Box 3191<br>San Leandro<br>CA 94578, USA</p>
+                            <p>Phone: +1 (650) 241-8486</p>
+                            <p>Email: <a href="mailto:support@appscode.com">support@appscode.com</a></p>
+                        </li>
+
+                        <li>
+                            <h3>Dhaka Office</h3>
+                            <h4>AppsCode Ltd.</h4>
+                            <p>Flat A2, House 4, Road 10<br> Sector 10, Uttara<br>Dhaka-1230, Bangladesh</p>
+                            <p>Phone: +880 1720-171904</p>
+                            <p>Email: <a href="mailto:support@appscode.com">support@appscode.com</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{{ partial "social.html" . }}
+
+{{ partial "footer.html" . }}

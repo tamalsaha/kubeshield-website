@@ -1,0 +1,148 @@
+#footer {
+  background: url("../../images/footer-shap.svg");
+  padding-top: 150px;
+  background-size: cover;
+  @media only screen and (max-width: 767px) {
+    padding-top: 50px;
+  }
+  .globalFooterCard {
+    margin: 20px;
+    @media only screen and (max-width: 767px) {
+      margin: 20px 0;
+    }
+    a.commonLink {
+      background: #fff;
+      text-decoration: none;
+      flex: 1 1 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      padding: 30px 30px 30px 120px;
+      border-radius: 4px;
+      box-shadow: 0 12px 22px rgba(63, 49, 178, .08), 0 6px 11px rgba(63, 49, 178, .04);
+      transition-duration: .15s;
+      @media only screen and (max-width: 767px) {
+        padding: 30px;
+      }
+      img {
+        @media only screen and (max-width: 767px) {
+          display: none;
+        }
+        position: absolute;
+        width: 60px;
+        left: 40px;
+      }
+      svg {
+        @media only screen and (max-width: 767px) {
+          display: none;
+        }
+        position: absolute;
+        width: 60px;
+        left: 40px;
+      }
+      h4 {
+        font-size: 18px;
+        line-height: 36px;
+        margin: 0;
+        font-weight: 600;
+        text-transform: capitalize;
+      }
+      p {
+        color: #6a6a8b;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+      }
+      &.ac-docs {
+        h4 {
+          color: #0061d9;
+        }
+      }
+      &.ac-pricing {
+        h4 {
+          color: #48a792;
+        }
+      }
+    }
+  }
+
+  .ac-footer {
+    padding: 80px 0 20px 0;
+    .ac-ft-list {
+      @media only screen and (max-width: 767px) {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      h4 {
+        color: #32325d;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        margin-bottom: 1em;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+        li {
+          list-style: none;
+          a {
+            display: block;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 2.2em;
+            color: #32325d;
+            text-decoration: none;
+            opacity: .8;
+            transition: all .25s ease-in-out;
+            transition-delay: 0s;
+            i {
+              padding-right: 5px;
+              font-size: 16px;
+              width: 20px;
+              height: 20px;
+              text-align: center;
+              img {
+                padding-right: 5px;
+                font-size: 16px;
+                width: 20px;
+                height: 20px;
+                text-align: center;
+              }
+            }
+            &:hover {
+              color: #3bb878;
+              opacity: 1;
+              transform: translateX(1px);
+            }
+          }
+        }
+      }
+    }
+  }
+  .ac-ft-logo {
+    padding: 50px 0;
+    a {
+      img {
+        width: 150px;
+        margin: 20px auto;
+        display: inherit;
+      }
+    }
+    p {
+      color: #61617c;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 30px;
+      a {
+        text-decoration: none;
+        color: #3bb878;
+        &:hover {
+          color: #3bb878;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

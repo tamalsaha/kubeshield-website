@@ -1,0 +1,42 @@
+.sub-menu {
+  background: #0d47a1;
+  border-top: 0;
+  border-radius: 0;
+  padding: 10px 0;
+
+  .navbar-collapse {
+    border: 0;
+    box-shadow: none;
+
+    @media only screen and(max-width: 767px) {
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .sub-menu-list {
+    text-align: left;
+    li {
+      display: inline-block;
+      padding-right: 5px;
+      @media only screen and(max-width: 767px) {
+        display: block;
+        padding-right: 0;
+      }
+      a {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        color: #fff;
+        text-transform: none;
+        font-weight: 500;
+        transition: all .2s ease-in-out;
+        padding: 6px 10px;
+        &.active, &:hover, &:focus {
+          background: #3bb878;
+          color: #fff;
+          border-radius: 0.25rem;
+        }
+      }
+    }
+  }
+}

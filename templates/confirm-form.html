@@ -1,0 +1,68 @@
+<div class="container-min">
+    <div class="logo-signin text-center">
+        <a class="" href="/"><img src="/images/logo-color.svg"></a>
+    </div>
+    <div class="signup-area">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Confirm your details</h3>
+                <p>Check all your sign up details carefully before proceeding.</p>
+                <form class="email" data-toggle="validator" role="form" autocomplete="off">
+                    <div class="form-group has-feedback">
+                        <a class="btn btn-link edit enable-input-button" id="email-4" role="button">Edit</a>
+                        <label class="title">Email</label>
+                        <input type="email" class="form-control email-box-edit disabledInput" id="email" name="input-email" value="{{ email }}" disabled required>
+                        <span class="glyphicon form-control-feedback" id="email1"></span>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <a class="btn btn-link edit enable-input-button" id="username-4" role="button">Edit</a>
+                        <label class="title">User Name</label>
+                        <input type="text" class="username form-control email-box-edit disabledInput" id="username" name="username" value="{{username}}" disabled required>
+                        <span class="glyphicon form-control-feedback" id="username1"></span>
+                    </div>
+                    <div class="form-group has-feedback">
+                        <a class="btn btn-link edit enable-input-button" id="teamname-4" role="button">Edit</a>
+                        <label for="subdomain">Team Name &nbsp;<i class="fa fa-info-circle" data-toggle="tooltip" title="Your team name. This could be your department or work-group name."></i> </label>
+                        <input type="text" class="teamname form-control email-box-edit disabledInput" id="teamname" name="teamname" value="{{teamname}}" disabled required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subdomain">Team ID &nbsp; <i class="fa fa-info-circle" data-toggle="tooltip" title="Choose you team id. This can't be changed later. Use only letters, numbers & hyphen."></i> </label>
+                        <div class="input-group has-feedback">
+                            <input type="text" class="sub-domain form-control email-box domain-name" id="subdomain" name="subdomain" value="{{subdomain}}" autocomplete="off" required>
+                            <div class="input-group-addon domin">.appscode.io</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <a class="btn btn-link edit enable-input-button" id="product-sku-4" role="button">Edit</a>
+                        <label for="product-sku">Product SKU</label>
+                        <select id="product-sku" class="form-control" disabled>
+                            {% for product in products %}
+                              {% if product.sku === subscription %}
+                              <option value="{{ product.sku }}" selected>{{ product.displayName }}</option>
+                              {% else %}
+                              <option value="{{ product.sku }}">{{ product.displayName }}</option>
+                              {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group {{ 'hidden' if not initialUsers }}">
+                        <a class="btn btn-link edit enable-input-button" id="user-count-4" role="button">Edit</a>
+                        <label for="user-count">User Number</label>
+                        <input id="user-count" type="number" class="form-control" name="user-count" min="1" max="100" placeholder="10" value="{{initialUsers}}" disabled required>
+                    </div>
+                    <button type="button" class="continue" id="btn-p2">Proceed</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="signin-legal">
+        By clicking "Proceed" I agree to AppsCode's <a href="/legal/tos/" target="_blank">Terms of Service</a>
+    </div>
+</div>
+
+<script>
+  $(document).ready(function ($) {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>

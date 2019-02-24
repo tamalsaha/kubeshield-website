@@ -1,0 +1,17 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: labels-cronjob
+  namespace: kube-system
+spec:
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: labels
+            image: shudipta/labels-vuln
+            ports:
+            - containerPort: 80
+          restartPolicy: OnFailure

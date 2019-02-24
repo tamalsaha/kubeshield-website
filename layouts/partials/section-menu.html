@@ -1,0 +1,18 @@
+<nav class="sub-menu">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="navbar-collapse">
+                    <ul class="nav sub-menu-list navbar-left">
+                    {{ $currentNode := . }}
+                    {{ $menu := .Section }}
+                    {{ range (index .Site.Menus .Section) }}
+                        <li><a {{if $currentNode.IsMenuCurrent $menu . }}class="active"{{end}} href="{{ .URL }}">{{ .Name }}</a></li>
+                    {{ end }}
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </div>
+    </div><!-- /.container -->
+</nav>

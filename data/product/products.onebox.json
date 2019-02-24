@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "sku": "ONEBOX-P6M",
+      "display_name": "Onebox Plan (paid every 6 months)",
+      "billing_model": "PER_SEAT",
+      "spec": {
+        "required_quota": "pkg.user",
+        "billing_period": "6M",
+        "trial_period": "30D",
+        "use_true_up": true,
+        "quotas": {
+          "pkg.user": -1,
+          "git.disk_gb": -1,
+          "attic.disk_gb": -1
+        },
+        "feature_sku": "ONEBOX"
+      },
+      "date_started": "2016-02-01T00:00:00.000Z",
+      "price_listings": [
+        {
+          "formula": "49",
+          "date_started": "2016-02-01T00:00:00.000Z"
+        }
+      ]
+    }
+  ]
+}

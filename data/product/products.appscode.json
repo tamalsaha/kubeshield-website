@@ -1,0 +1,191 @@
+{
+  "products": [
+    {
+      "sku": "CC-ESSENTIAL-M2M",
+      "display_name": "ContainerCloud Essential Plan (paid monthly)",
+      "billing_model": "PER_SEAT",
+      "spec": {
+        "required_quota": "pkg.user",
+        "billing_period": "1M",
+        "trial_period": "30D",
+        "quotas": {
+          "pkg.user": 100
+        },
+        "feature_sku": "CC-ESSENTIAL",
+        "feature_gates": {
+          "app.diffusion": 0,
+          "app.differential": 0,
+          "app.audit": 0,
+          "app.maniphest": 0,
+          "app.pholio": 0,
+          "app.phriction": 0,
+          "app.paste": 0,
+          "app.phurl": 0,
+          "app.ponder": 0,
+          "app.legalpad": 0
+        }
+      },
+      "date_started": "2016-02-01T00:00:00.000Z",
+      "subscription_domain": "containercloud",
+      "price_listings": [
+        {
+          "formula": "15",
+          "date_started": "2016-02-01T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "sku": "CC-ESSENTIAL-P6M",
+      "display_name": "ContaineCloud Essential Plan (paid every 6 months)",
+      "billing_model": "PER_SEAT",
+      "spec": {
+        "required_quota": "pkg.user",
+        "billing_period": "6M",
+        "trial_period": "30D",
+        "use_true_up": true,
+        "quotas": {
+          "pkg.user": 100
+        },
+        "feature_sku": "CC-ESSENTIAL",
+
+        "feature_gates": {
+          "app.diffusion": 0,
+          "app.differential": 0,
+          "app.audit": 0,
+          "app.maniphest": 0,
+          "app.pholio": 0,
+          "app.phriction": 0,
+          "app.paste": 0,
+          "app.phurl": 0,
+          "app.ponder": 0,
+          "app.legalpad": 0
+        }
+      },
+      "date_started": "2016-02-01T00:00:00.000Z",
+      "subscription_domain": "containercloud",
+      "price_listings": [
+        {
+          "formula": "60",
+          "date_started": "2016-02-01T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "sku": "AC-STARTUP-M2M",
+      "display_name": "Startup Plan (paid monthly)",
+      "billing_model": "PER_SEAT",
+      "spec": {
+        "required_quota": "pkg.user",
+        "billing_period": "1M",
+        "trial_period": "30D",
+        "quotas": {
+          "pkg.user": 10,
+          "git.disk_gb": 50,
+          "attic.disk_gb": 100
+        },
+        "feature_sku": "STARTUP"
+      },
+      "date_started": "2016-02-01T00:00:00.000Z",
+      "price_listings": [
+        {
+          "formula": "49",
+          "date_started": "2016-02-01T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "sku": "AC-STARTUP-P6M",
+      "display_name": "Startup Plan (paid every 6 months)",
+      "billing_model": "PER_SEAT",
+      "spec": {
+        "required_quota": "pkg.user",
+        "billing_period": "6M",
+        "trial_period": "30D",
+        "use_true_up": true,
+        "quotas": {
+          "pkg.user": 10,
+          "git.disk_gb": 50,
+          "attic.disk_gb": 100
+        },
+        "feature_sku": "STARTUP"
+      },
+      "date_started": "2016-02-01T00:00:00.000Z",
+      "price_listings": [
+        {
+          "formula": "249",
+          "date_started": "2016-02-01T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "sku": "AC-BUSINESS-M2M",
+      "display_name": "Business Plan (paid monthly)",
+      "billing_model": "PER_SEAT",
+      "spec": {
+        "required_quota": "pkg.user",
+        "billing_period": "1M",
+        "trial_period": "30D",
+        "quotas": {
+          "pkg.user": 100,
+          "git.disk_gb": 500,
+          "attic.disk_gb": 1000
+        },
+        "feature_sku": "BUSINESS"
+      },
+      "date_started": "2016-02-01T00:00:00.000Z",
+      "price_listings": [
+        {
+          "formula": "99",
+          "date_started": "2016-02-01T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "sku": "AC-BUSINESS-P6M",
+      "display_name": "Business Plan (paid every 6 months)",
+      "billing_model": "PER_SEAT",
+      "spec": {
+        "required_quota": "pkg.user",
+        "billing_period": "6M",
+        "trial_period": "30D",
+        "use_true_up": true,
+        "quotas": {
+          "pkg.user": 100,
+          "git.disk_gb": 500,
+          "attic.disk_gb": 1000
+        },
+        "feature_sku": "STARTUP"
+      },
+      "date_started": "2016-02-01T00:00:00.000Z",
+      "price_listings": [
+        {
+          "formula": "499",
+          "date_started": "2016-02-01T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "sku": "AC-ENTERPRISE",
+      "display_name": "Enterprise (paid every 12 months)",
+      "billing_model": "PER_SEAT",
+      "spec": {
+        "required_quota": "pkg.user",
+        "billing_period": "12M",
+        "use_true_up": true,
+        "quotas": {
+          "pkg.user": -1,
+          "git.disk_gb": -1,
+          "attic.disk_gb": -1
+        },
+        "feature_sku": "ENTERPRISE"
+      },
+      "date_started": "2016-02-01T00:00:00.000Z",
+      "price_listings": [
+        {
+          "formula": "1999",
+          "date_started": "2016-02-01T00:00:00.000Z"
+        }
+      ]
+    }
+  ]
+}

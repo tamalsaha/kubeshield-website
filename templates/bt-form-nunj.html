@@ -1,0 +1,103 @@
+<div class="container-min">
+    <div class="logo-signin text-center">
+        <a class="" href="/"><img src="/images/logo-color.svg"></a>
+    </div>
+    <div class="signup-area">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Add Credit Card</h3>
+                <p>Your credit card will be charged at the end of trial period</p>
+
+                <form class="email" data-toggle="validator" role="form" id="second-form">
+
+                    <div class="cardinfo-card-number">
+                        <div class="form-group">
+                            <label for="card-number">Card Number</label>
+                            <div id="card-number" class="hosted-field"></div>
+                            <div id="card-image" class=""></div>
+                            <label id="card-number-error" class="error hidden number-sm-error">This field is required.</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="expiration-date">Expiration Date</label>
+                                <div id="expiration-date" class="hosted-field"></div>
+                                <label id="expiration-date-error" class="error hidden expirationDate-sm-error">This field is required.</label>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="cvv">CVV</label>
+                                <div id="cvv" class="hosted-field"></div>
+                                <label id="cvv-error" class="error hidden cvv-sm-error" for="cvv">This field is required.</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="f-name">First Name</label>
+                                <input type="text" class="form-control email-box billing-add-cmn" id="f-name" name="first_name" placeholder="First Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="l-name">Last Name</label>
+                                <input type="text" class="form-control email-box billing-add-cmn" id="l-name" name="last_name" placeholder="Last Name" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="s-address">Street Address</label>
+                                <input type="text" class="form-control email-box billing-add-cmn" id="s-address" name="street_address" placeholder="Street Address" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="city">City</label>
+                                <input type="text" class="form-control billing-add-cmn" id="city" placeholder="City" name="locality" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group" id="state-section">
+                                    <label for="state">State</label>
+                                    <input type="text" class="form-control billing-add-cmn" id="state" placeholder="State" name="region" required>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="postal-code">Postal Code</label>
+                                <div id="postal-code" class="hosted-field"></div>
+                                <label id="postal-code-error" class="error hidden postalCode-sm-error" for="postal-code">This field is required.</label>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="country-code">Country</label>
+                                <select class="form-control billing-add-cmn" name="country_code_numeric" id="country-code" required>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="brace-btn">
+                        <button class="skip" id="skip-add-pm">Skip Now</button>
+                        <button class="submit" id="second-btn-payment">Proceed</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="signin-legal">
+        By clicking "Proceed" I agree to AppsCode's <a href="/legal/tos/" target="_blank">Terms of Service</a>
+    </div>
+</div>

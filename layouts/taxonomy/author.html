@@ -1,0 +1,70 @@
+
+{{ $author := (index $.Site.Data.author (.Title | urlize) ) }}
+
+{{ partial "header.html" . }}
+
+<div class="inner-header-area">
+    {{ partial "menu.html" . }}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="banner-content authors-banner ">
+                    <img class="authors" src="{{$author.image}}">
+                    <h4><span>Posts By</span> &nbsp; || &nbsp; <b>{{ .Title }}</b></h4>
+                    <p>{{$author.title}}</p>
+                    <div class="find-us-blog">
+                        <ul>
+                            {{ if isset $author "contact_email" }}<li><a href="mailto:{{ $author.contact_email }}" target="_blank"><i class="fa fa-envelope"></i></a></li>{{end}}
+                            {{ if isset $author "twitter_url" }}<li><a href="{{ $author.twitter_url }}" target="_blank"><i class="fa fa-twitter"></i></a></li>{{end}}
+                            {{ if isset $author "facebook_url" }}<li><a href="{{ $author.facebook_url }}"target="_blank"><i class="fa fa-facebook"></i></a></li>{{end}}
+                            {{ if isset $author "github_url" }}<li><a href="{{ $author.github_url }}" target="_blank"><i class="fa fa-github"></i></a></li>{{end}}
+                            {{ if isset $author "linkedin_url" }}<li><a href="{{ $author.linkedin_url }}"target="_blank"><i class="fa fa-linkedin"></i></a></li>{{end}}
+                            {{ if isset $author "website_url" }}<li><a href="{{ $author.website_url }}"target="_blank"><i class="fa fa-globe"></i></a></li>{{end}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /End of Slider Area -->
+</div><!-- /End of Home Section -->
+
+<!-- Main Content -->
+
+<div class="list-post">
+    <div class="container">
+        <div class="row">
+            <div class="blog">
+                {{ range first 5 .Paginator.Pages }}
+                    <div class="col-md-6">
+                        <div class="blog-list">
+                            <a href="{{ .RelPermalink }}">
+                                {{ if isset .Params "image" }}
+                                <div class="post-img">
+                                    <img alt="" src="{{ .Params.image }}">
+                                </div>
+                                {{ else }}
+                                    <img class=" border-img-hover" alt="" src="{{ .Params.preview }}">
+                                {{ end }}
+                            </a>
+                            <p class="post-meta">
+                                <b>on</b> {{ dateFormat $.Site.Params.date_format .Date }}
+                            </p>
+    
+                            <div class="post-description">
+                                <a class="blog-title" href="{{ .RelPermalink }}"><h3>{{ title .Title }}</h3></a>
+                                {{ .Summary }}
+    
+                                <div class="blog-categories">
+                                    {{ partial "categories.html" . }}
+                                </div>
+                                <!--<a style="margin-top: 20px; display: block" href="{{ .RelPermalink }}">Read more →</a>-->
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>  
+</div>
+
+{{ partial "footer.html" . }}

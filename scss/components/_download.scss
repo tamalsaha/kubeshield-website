@@ -1,0 +1,36 @@
+.download {
+  .os {
+    background: #fbfbfb;
+    padding: 20px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    text-align: center;
+    min-height: 270px;
+    img {
+      margin: 0 auto;
+      overflow: hidden;
+      height: auto;
+      border-radius: 3px;
+      width: 100px;
+    }
+    a {
+      border-radius: 22px;
+      padding: 10px 20px;
+      line-height: 44px;
+      font-size: 12px;
+      font-weight: 600;
+      text-align: center;
+      display: inline;
+      box-shadow: 0 12px 54px 0 rgba(0,0,0,.09);
+      &.os-32 {
+        background: #fff;
+        color: #44d89e;
+        margin-right: 5px;
+      }
+      &.os-64 {
+        color: #fff;
+        background: #3bb878;
+      }
+    }
+  }
+}

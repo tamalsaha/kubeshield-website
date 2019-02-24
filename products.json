@@ -1,0 +1,13 @@
+{
+  "products": {
+    "scanner": {
+      "url": "https://github.com/kubeshield/scanner.git",
+      "versions": [
+          { "branch": "master", "hostDocs": false, "v-dropdown": true },
+          { "branch": "0.1.0", "hostDocs": true, "v-dropdown": true }
+      ],
+      "latestVersion": "0.1.0",
+      "githubUrl": "https://github.com/kubeshield/scanner"
+    }
+  }
+}

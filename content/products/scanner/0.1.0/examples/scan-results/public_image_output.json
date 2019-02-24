@@ -1,0 +1,1073 @@
+{
+  "metadata": {
+    "name": "ignores",
+    "selfLink": "/apis/scanner.soter.ac/v1alpha1/imagereviews/ignores",
+    "creationTimestamp": null
+  },
+  "response": {
+    "features": [
+      {
+        "Name": "diffutils",
+        "NamespaceName": "debian:9",
+        "Version": "1:3.5-3"
+      },
+      {
+        "Name": "mawk",
+        "NamespaceName": "debian:9",
+        "Version": "1.3.3-17"
+      },
+      {
+        "Name": "systemd",
+        "NamespaceName": "debian:9",
+        "Version": "232-25+deb9u2",
+        "vulnerabilities": [
+          {
+            "Name": "CVE-2018-6954",
+            "NamespaceName": "debian:9",
+            "Description": "systemd-tmpfiles in systemd through 237 mishandles symlinks present in non-terminal path components, which allows local users to obtain ownership of arbitrary files via vectors involving creation of a directory and a file under that directory, and later replacing that directory with a symlink. This occurs even if the fs.protected_symlinks sysctl is turned on.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2018-6954",
+            "Severity": "High",
+            "featureName": "systemd"
+          },
+          {
+            "Name": "CVE-2018-1049",
+            "NamespaceName": "debian:9",
+            "Description": "In systemd prior to 234 a race condition exists between .mount and .automount units such that automount requests from kernel may not be serviced by systemd resulting in kernel holding the mountpoint and any processes that try to use said mount will hang. A race condition like this may lead to denial of service, until mount points are unmounted.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2018-1049",
+            "Severity": "Medium",
+            "featureName": "systemd"
+          },
+          {
+            "Name": "CVE-2013-4392",
+            "NamespaceName": "debian:9",
+            "Description": "systemd, when updating file permissions, allows local users to change the permissions and SELinux security contexts for arbitrary files via a symlink attack on unspecified files.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2013-4392",
+            "Severity": "Negligible",
+            "featureName": "systemd"
+          },
+          {
+            "Name": "CVE-2017-15908",
+            "NamespaceName": "debian:9",
+            "Description": "In systemd 223 through 235, a remote DNS server can respond with a custom crafted DNS NSEC resource record to trigger an infinite loop in the dns_packet_read_type_window() function of the 'systemd-resolved' service and cause a DoS of the affected service.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-15908",
+            "Severity": "Medium",
+            "featureName": "systemd"
+          },
+          {
+            "Name": "CVE-2017-18078",
+            "NamespaceName": "debian:9",
+            "Description": "systemd-tmpfiles in systemd before 237 attempts to support ownership/permission changes on hardlinked files even if the fs.protected_hardlinks sysctl is turned off, which allows local users to bypass intended access restrictions via vectors involving a hard link to a file for which the user lacks write access, as demonstrated by changing the ownership of the /etc/passwd file.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-18078",
+            "Severity": "Negligible",
+            "featureName": "systemd"
+          },
+          {
+            "Name": "CVE-2017-1000082",
+            "NamespaceName": "debian:9",
+            "Description": "systemd v233 and earlier fails to safely parse usernames starting with a numeric digit (e.g. \"0day\"), running the service in question with root privileges rather than the user intended.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-1000082",
+            "Severity": "Negligible",
+            "featureName": "systemd"
+          }
+        ]
+      },
+      {
+        "Name": "ucf",
+        "NamespaceName": "debian:9",
+        "Version": "3.0036"
+      },
+      {
+        "Name": "libbsd",
+        "NamespaceName": "debian:9",
+        "Version": "0.8.3-1"
+      },
+      {
+        "Name": "nginx",
+        "NamespaceName": "debian:9",
+        "Version": "1.13.12-1~stretch",
+        "vulnerabilities": [
+          {
+            "Name": "CVE-2009-4487",
+            "NamespaceName": "debian:9",
+            "Description": "nginx 0.7.64 writes data to a log file without sanitizing non-printable characters, which might allow remote attackers to modify a window's title, or possibly execute arbitrary commands or overwrite files, via an HTTP request containing an escape sequence for a terminal emulator.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2009-4487",
+            "Severity": "Negligible",
+            "featureName": "nginx"
+          },
+          {
+            "Name": "CVE-2013-0337",
+            "NamespaceName": "debian:9",
+            "Description": "The default configuration of nginx, possibly 1.3.13 and earlier, uses world-readable permissions for the (1) access.log and (2) error.log files, which allows local users to obtain sensitive information by reading the files.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2013-0337",
+            "Severity": "Low",
+            "featureName": "nginx"
+          }
+        ]
+      },
+      {
+        "Name": "findutils",
+        "NamespaceName": "debian:9",
+        "Version": "4.6.0+git+20161106-2"
+      },
+      {
+        "Name": "lz4",
+        "NamespaceName": "debian:9",
+        "Version": "0.0~r131-2"
+      },
+      {
+        "Name": "debian-archive-keyring",
+        "NamespaceName": "debian:9",
+        "Version": "2017.5"
+      },
+      {
+        "Name": "coreutils",
+        "NamespaceName": "debian:9",
+        "Version": "8.26-3",
+        "vulnerabilities": [
+          {
+            "Name": "CVE-2016-2781",
+            "NamespaceName": "debian:9",
+            "Description": "chroot in GNU coreutils, when used with --userspec, allows local users to escape to the parent session via a crafted TIOCSTI ioctl call, which pushes characters to the terminal's input buffer.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2016-2781",
+            "Severity": "Low",
+            "featureName": "coreutils"
+          },
+          {
+            "Name": "CVE-2017-18018",
+            "NamespaceName": "debian:9",
+            "Description": "In GNU Coreutils through 8.29, chown-core.c in chown and chgrp does not prevent replacement of a plain file with a symlink during use of the POSIX \"-R -L\" options, which allows local users to modify the ownership of arbitrary files by leveraging a race condition.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-18018",
+            "Severity": "Negligible",
+            "featureName": "coreutils"
+          }
+        ]
+      },
+      {
+        "Name": "acl",
+        "NamespaceName": "debian:9",
+        "Version": "2.2.52-3"
+      },
+      {
+        "Name": "sensible-utils",
+        "NamespaceName": "debian:9",
+        "Version": "0.0.9+deb9u1"
+      },
+      {
+        "Name": "libxpm",
+        "NamespaceName": "debian:9",
+        "Version": "1:3.5.12-1"
+      },
+      {
+        "Name": "gcc-6",
+        "NamespaceName": "debian:9",
+        "Version": "6.3.0-18+deb9u1"
+      },
+      {
+        "Name": "libxdmcp",
+        "NamespaceName": "debian:9",
+        "Version": "1:1.1.2-3"
+      },
+      {
+        "Name": "tiff",
+        "NamespaceName": "debian:9",
+        "Version": "4.0.8-2+deb9u2",
+        "vulnerabilities": [
+          {
+            "Name": "CVE-2017-17973",
+            "NamespaceName": "debian:9",
+            "Description": "** DISPUTED ** In LibTIFF 4.0.8, there is a heap-based use-after-free in the t2p_writeproc function in tiff2pdf.c. NOTE: there is a third-party report of inability to reproduce this issue.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-17973",
+            "Severity": "Negligible",
+            "featureName": "tiff"
+          },
+          {
+            "Name": "CVE-2018-10963",
+            "NamespaceName": "debian:9",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2018-10963",
+            "Severity": "Unknown",
+            "featureName": "tiff"
+          },
+          {
+            "Name": "CVE-2018-10801",
+            "NamespaceName": "debian:9",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2018-10801",
+            "Severity": "Unknown",
+            "featureName": "tiff"
+          },
+          {
+            "Name": "CVE-2018-10779",
+            "NamespaceName": "debian:9",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2018-10779",
+            "Severity": "Unknown",
+            "featureName": "tiff"
+          },
+          {
+            "Name": "CVE-2018-10126",
+            "NamespaceName": "debian:9",
+            "Description": "LibTIFF 4.0.9 has a NULL pointer dereference in the jpeg_fdct_16x16 function in jfdctint.c.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2018-10126",
+            "Severity": "Negligible",
+            "featureName": "tiff"
+          },
+          {
+            "Name": "CVE-2018-8905",
+            "NamespaceName": "debian:9",
+            "Description": "In LibTIFF 4.0.9, a heap-based buffer overflow occurs in the function LZWDecodeCompat in tif_lzw.c via a crafted TIFF file, as demonstrated by tiff2ps.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2018-8905",
+            "Severity": "Medium",
+            "featureName": "tiff"
+          },
+          {
+            "Name": "CVE-2018-7456",
+            "NamespaceName": "debian:9",
+            "Description": "A NULL Pointer Dereference occurs in the function TIFFPrintDirectory in tif_print.c in LibTIFF 4.0.9 when using the tiffinfo tool to print crafted TIFF information, a different vulnerability than CVE-2017-18013. (This affects an earlier part of the TIFFPrintDirectory function that was not addressed by the CVE-2017-18013 patch.)",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2018-7456",
+            "Severity": "Medium",
+            "featureName": "tiff"
+          },
+          {
+            "Name": "CVE-2017-11613",
+            "NamespaceName": "debian:9",
+            "Description": "In LibTIFF 4.0.8, there is a denial of service vulnerability in the TIFFOpen function. A crafted input will lead to a denial of service attack. During the TIFFOpen process, td_imagelength is not checked. The value of td_imagelength can be directly controlled by an input file. In the ChopUpSingleUncompressedStrip function, the _TIFFCheckMalloc function is called based on td_imagelength. If we set the value of td_imagelength close to the amount of system memory, it will hang the system or trigger the OOM killer.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-11613",
+            "Severity": "Medium",
+            "featureName": "tiff"
+          },
+          {
+            "Name": "CVE-2014-8130",
+            "NamespaceName": "debian:9",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2014-8130",
+            "Severity": "Negligible",
+            "featureName": "tiff"
+          },
+          {
+            "Name": "CVE-2018-5784",
+            "NamespaceName": "debian:9",
+            "Description": "In LibTIFF 4.0.9, there is an uncontrolled resource consumption in the TIFFSetDirectory function of tif_dir.c. Remote attackers could leverage this vulnerability to cause a denial of service via a crafted tif file. This occurs because the declared number of directory entries is not validated against the actual number of directory entries.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2018-5784",
+            "Severity": "Medium",
+            "featureName": "tiff"
+          },
+          {
+            "Name": "CVE-2017-17942",
+            "NamespaceName": "debian:9",
+            "Description": "In LibTIFF 4.0.9, there is a heap-based buffer over-read in the function PackBitsEncode in tif_packbits.c.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-17942",
+            "Severity": "Medium",
+            "featureName": "tiff"
+          },
+          {
+            "Name": "CVE-2017-9117",
+            "NamespaceName": "debian:9",
+            "Description": "In LibTIFF 4.0.7, the program processes BMP images without verifying that biWidth and biHeight in the bitmap-information header match the actual input, leading to a heap-based buffer over-read in bmp2tiff.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-9117",
+            "Severity": "Negligible",
+            "featureName": "tiff"
+          },
+          {
+            "Name": "CVE-2018-5360",
+            "NamespaceName": "debian:9",
+            "Description": "LibTIFF before 4.0.6 mishandles the reading of TIFF files, as demonstrated by a heap-based buffer over-read in the ReadTIFFImage function in coders/tiff.c in GraphicsMagick 1.3.27.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2018-5360",
+            "Severity": "Medium",
+            "featureName": "tiff"
+          },
+          {
+            "Name": "CVE-2017-16232",
+            "NamespaceName": "debian:9",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-16232",
+            "Severity": "Negligible",
+            "featureName": "tiff"
+          },
+          {
+            "Name": "CVE-2017-17095",
+            "NamespaceName": "debian:9",
+            "Description": "tools/pal2rgb.c in pal2rgb in LibTIFF 4.0.9 allows remote attackers to cause a denial of service (TIFFSetupStrips heap-based buffer overflow and application crash) or possibly have unspecified other impact via a crafted TIFF file.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-17095",
+            "Severity": "Negligible",
+            "featureName": "tiff"
+          },
+          {
+            "Name": "CVE-2017-5563",
+            "NamespaceName": "debian:9",
+            "Description": "LibTIFF version 4.0.7 is vulnerable to a heap-based buffer over-read in tif_lzw.c resulting in DoS or code execution via a crafted bmp image to tools/bmp2tiff.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-5563",
+            "Severity": "Negligible",
+            "featureName": "tiff"
+          }
+        ]
+      },
+      {
+        "Name": "dash",
+        "NamespaceName": "debian:9",
+        "Version": "0.5.8-2.4"
+      },
+      {
+        "Name": "libgd2",
+        "NamespaceName": "debian:9",
+        "Version": "2.2.4-2+deb9u2",
+        "vulnerabilities": [
+          {
+            "Name": "CVE-2018-5711",
+            "NamespaceName": "debian:9",
+            "Description": "gd_gif_in.c in the GD Graphics Library (aka libgd), as used in PHP before 5.6.33, 7.0.x before 7.0.27, 7.1.x before 7.1.13, and 7.2.x before 7.2.1, has an integer signedness error that leads to an infinite loop via a crafted GIF file, as demonstrated by a call to the imagecreatefromgif or imagecreatefromstring PHP function. This is related to GetCode_ and gdImageCreateFromGifCtx.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2018-5711",
+            "Severity": "Medium",
+            "featureName": "libgd2"
+          }
+        ]
+      },
+      {
+        "Name": "db5.3",
+        "NamespaceName": "debian:9",
+        "Version": "5.3.28-12+deb9u1"
+      },
+      {
+        "Name": "tzdata",
+        "NamespaceName": "debian:9",
+        "Version": "2018c-0+deb9u1"
+      },
+      {
+        "Name": "dpkg",
+        "NamespaceName": "debian:9",
+        "Version": "1.18.24"
+      },
+      {
+        "Name": "init-system-helpers",
+        "NamespaceName": "debian:9",
+        "Version": "1.48"
+      },
+      {
+        "Name": "libsepol",
+        "NamespaceName": "debian:9",
+        "Version": "2.6-2"
+      },
+      {
+        "Name": "hostname",
+        "NamespaceName": "debian:9",
+        "Version": "3.18"
+      },
+      {
+        "Name": "libxcb",
+        "NamespaceName": "debian:9",
+        "Version": "1.12-1"
+      },
+      {
+        "Name": "sed",
+        "NamespaceName": "debian:9",
+        "Version": "4.4-1"
+      },
+      {
+        "Name": "audit",
+        "NamespaceName": "debian:9",
+        "Version": "1:2.6.7-2"
+      },
+      {
+        "Name": "libxslt",
+        "NamespaceName": "debian:9",
+        "Version": "1.1.29-2.1",
+        "vulnerabilities": [
+          {
+            "Name": "CVE-2015-9019",
+            "NamespaceName": "debian:9",
+            "Description": "In libxslt 1.1.29 and earlier, the EXSLT math.random function was not initialized with a random seed during startup, which could cause usage of this function to produce predictable outputs.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2015-9019",
+            "Severity": "Negligible",
+            "featureName": "libxslt"
+          }
+        ]
+      },
+      {
+        "Name": "ncurses",
+        "NamespaceName": "debian:9",
+        "Version": "6.0+20161126-1+deb9u2",
+        "vulnerabilities": [
+          {
+            "Name": "CVE-2018-10754",
+            "NamespaceName": "debian:9",
+            "Description": "In ncurses before 6.1.20180414, there is a NULL Pointer Dereference in the _nc_parse_entry function of tinfo/parse_entry.c. It could lead to a remote denial of service if the terminfo library code is used to process untrusted terminfo data in which a use-name is invalid syntax.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2018-10754",
+            "Severity": "Low",
+            "featureName": "ncurses"
+          },
+          {
+            "Name": "CVE-2017-16879",
+            "NamespaceName": "debian:9",
+            "Description": "Stack-based buffer overflow in the _nc_write_entry function in tinfo/write_entry.c in ncurses 6.0 allows attackers to cause a denial of service (application crash) or possibly execute arbitrary code via a crafted terminfo file, as demonstrated by tic.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-16879",
+            "Severity": "Medium",
+            "featureName": "ncurses"
+          }
+        ]
+      },
+      {
+        "Name": "libedit",
+        "NamespaceName": "debian:9",
+        "Version": "3.1-20160903-3"
+      },
+      {
+        "Name": "pam",
+        "NamespaceName": "debian:9",
+        "Version": "1.1.8-3.6"
+      },
+      {
+        "Name": "zlib",
+        "NamespaceName": "debian:9",
+        "Version": "1:1.2.8.dfsg-5"
+      },
+      {
+        "Name": "cdebconf",
+        "NamespaceName": "debian:9",
+        "Version": "0.227"
+      },
+      {
+        "Name": "libpng1.6",
+        "NamespaceName": "debian:9",
+        "Version": "1.6.28-1"
+      },
+      {
+        "Name": "freetype",
+        "NamespaceName": "debian:9",
+        "Version": "2.6.3-3.2"
+      },
+      {
+        "Name": "libx11",
+        "NamespaceName": "debian:9",
+        "Version": "2:1.6.4-3"
+      },
+      {
+        "Name": "base-passwd",
+        "NamespaceName": "debian:9",
+        "Version": "3.5.43"
+      },
+      {
+        "Name": "debianutils",
+        "NamespaceName": "debian:9",
+        "Version": "4.8.1.1"
+      },
+      {
+        "Name": "nginx-module-geoip",
+        "NamespaceName": "debian:9",
+        "Version": "1.13.12-1~stretch"
+      },
+      {
+        "Name": "gettext",
+        "NamespaceName": "debian:9",
+        "Version": "0.19.8.1-2"
+      },
+      {
+        "Name": "bzip2",
+        "NamespaceName": "debian:9",
+        "Version": "1.0.6-8.1"
+      },
+      {
+        "Name": "bash",
+        "NamespaceName": "debian:9",
+        "Version": "4.4-5"
+      },
+      {
+        "Name": "nginx-module-image-filter",
+        "NamespaceName": "debian:9",
+        "Version": "1.13.12-1~stretch"
+      },
+      {
+        "Name": "pcre3",
+        "NamespaceName": "debian:9",
+        "Version": "2:8.39-3",
+        "vulnerabilities": [
+          {
+            "Name": "CVE-2017-7245",
+            "NamespaceName": "debian:9",
+            "Description": "Stack-based buffer overflow in the pcre32_copy_substring function in pcre_get.c in libpcre1 in PCRE 8.40 allows remote attackers to cause a denial of service (WRITE of size 4) or possibly have unspecified other impact via a crafted file.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-7245",
+            "Severity": "Negligible",
+            "featureName": "pcre3"
+          },
+          {
+            "Name": "CVE-2017-16231",
+            "NamespaceName": "debian:9",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-16231",
+            "Severity": "Negligible",
+            "featureName": "pcre3"
+          },
+          {
+            "Name": "CVE-2017-7246",
+            "NamespaceName": "debian:9",
+            "Description": "Stack-based buffer overflow in the pcre32_copy_substring function in pcre_get.c in libpcre1 in PCRE 8.40 allows remote attackers to cause a denial of service (WRITE of size 268) or possibly have unspecified other impact via a crafted file.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-7246",
+            "Severity": "Negligible",
+            "featureName": "pcre3"
+          },
+          {
+            "Name": "CVE-2017-11164",
+            "NamespaceName": "debian:9",
+            "Description": "In PCRE 8.41, the OP_KETRMAX feature in the match function in pcre_exec.c allows stack exhaustion (uncontrolled recursion) when processing a crafted regular expression.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-11164",
+            "Severity": "Negligible",
+            "featureName": "pcre3"
+          }
+        ]
+      },
+      {
+        "Name": "base-files",
+        "NamespaceName": "debian:9",
+        "Version": "9.9+deb9u4"
+      },
+      {
+        "Name": "libgpg-error",
+        "NamespaceName": "debian:9",
+        "Version": "1.26-2"
+      },
+      {
+        "Name": "util-linux",
+        "NamespaceName": "debian:9",
+        "Version": "2.29.2-1+deb9u1",
+        "vulnerabilities": [
+          {
+            "Name": "CVE-2016-2779",
+            "NamespaceName": "debian:9",
+            "Description": "runuser in util-linux allows local users to escape to the parent session via a crafted TIOCSTI ioctl call, which pushes characters to the terminal's input buffer.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2016-2779",
+            "Severity": "High",
+            "featureName": "util-linux"
+          }
+        ]
+      },
+      {
+        "Name": "xz-utils",
+        "NamespaceName": "debian:9",
+        "Version": "5.2.2-1.2"
+      },
+      {
+        "Name": "libxau",
+        "NamespaceName": "debian:9",
+        "Version": "1:1.0.8-1"
+      },
+      {
+        "Name": "lsb",
+        "NamespaceName": "debian:9",
+        "Version": "9.20161125"
+      },
+      {
+        "Name": "geoip",
+        "NamespaceName": "debian:9",
+        "Version": "1.6.9-4"
+      },
+      {
+        "Name": "gnupg2",
+        "NamespaceName": "debian:9",
+        "Version": "2.1.18-8~deb9u1",
+        "vulnerabilities": [
+          {
+            "Name": "CVE-2018-9234",
+            "NamespaceName": "debian:9",
+            "Description": "GnuPG 2.2.4 and 2.2.5 does not enforce a configuration in which key certification requires an offline master Certify key, which results in apparently valid certifications that occurred only with access to a signing subkey.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2018-9234",
+            "Severity": "Low",
+            "featureName": "gnupg2"
+          }
+        ]
+      },
+      {
+        "Name": "expat",
+        "NamespaceName": "debian:9",
+        "Version": "2.2.0-2+deb9u1",
+        "vulnerabilities": [
+          {
+            "Name": "CVE-2013-0340",
+            "NamespaceName": "debian:9",
+            "Description": "expat 2.1.0 and earlier does not properly handle entities expansion unless an application developer uses the XML_SetEntityDeclHandler function, which allows remote attackers to cause a denial of service (resource consumption), send HTTP requests to intranet servers, or read arbitrary files via a crafted XML document, aka an XML External Entity (XXE) issue.  NOTE: it could be argued that because expat already provides the ability to disable external entity expansion, the responsibility for resolving this issue lies with application developers; according to this argument, this entry should be REJECTed, and each affected application would need its own CVE.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2013-0340",
+            "Severity": "Negligible",
+            "featureName": "expat"
+          }
+        ]
+      },
+      {
+        "Name": "libwebp",
+        "NamespaceName": "debian:9",
+        "Version": "0.5.2-1",
+        "vulnerabilities": [
+          {
+            "Name": "CVE-2016-9085",
+            "NamespaceName": "debian:9",
+            "Description": "Multiple integer overflows in libwebp allows attackers to have unspecified impact via unknown vectors.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2016-9085",
+            "Severity": "Negligible",
+            "featureName": "libwebp"
+          }
+        ]
+      },
+      {
+        "Name": "nginx-module-xslt",
+        "NamespaceName": "debian:9",
+        "Version": "1.13.12-1~stretch"
+      },
+      {
+        "Name": "icu",
+        "NamespaceName": "debian:9",
+        "Version": "57.1-6+deb9u2"
+      },
+      {
+        "Name": "fontconfig",
+        "NamespaceName": "debian:9",
+        "Version": "2.11.0-6.7"
+      },
+      {
+        "Name": "attr",
+        "NamespaceName": "debian:9",
+        "Version": "1:2.4.47-2"
+      },
+      {
+        "Name": "apt",
+        "NamespaceName": "debian:9",
+        "Version": "1.4.8",
+        "vulnerabilities": [
+          {
+            "Name": "CVE-2011-3374",
+            "NamespaceName": "debian:9",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2011-3374",
+            "Severity": "Negligible",
+            "featureName": "apt"
+          }
+        ]
+      },
+      {
+        "Name": "perl",
+        "NamespaceName": "debian:9",
+        "Version": "5.24.1-3+deb9u2",
+        "vulnerabilities": [
+          {
+            "Name": "CVE-2018-6913",
+            "NamespaceName": "debian:9",
+            "Description": "Heap-based buffer overflow in the pack function in Perl before 5.26.2 allows context-dependent attackers to execute arbitrary code via a large item count.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2018-6913",
+            "Severity": "Unknown",
+            "FixedBy": "5.24.1-3+deb9u3",
+            "featureName": "perl"
+          },
+          {
+            "Name": "CVE-2018-6797",
+            "NamespaceName": "debian:9",
+            "Description": "An issue was discovered in Perl 5.18 through 5.26. A crafted regular expression can cause a heap-based buffer overflow, with control over the bytes written.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2018-6797",
+            "Severity": "Unknown",
+            "FixedBy": "5.24.1-3+deb9u3",
+            "featureName": "perl"
+          },
+          {
+            "Name": "CVE-2018-6798",
+            "NamespaceName": "debian:9",
+            "Description": "An issue was discovered in Perl 5.22 through 5.26. Matching a crafted locale dependent regular expression can cause a heap-based buffer over-read and potentially information disclosure.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2018-6798",
+            "Severity": "Negligible",
+            "FixedBy": "5.24.1-3+deb9u3",
+            "featureName": "perl"
+          },
+          {
+            "Name": "CVE-2011-4116",
+            "NamespaceName": "debian:9",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2011-4116",
+            "Severity": "Negligible",
+            "featureName": "perl"
+          }
+        ]
+      },
+      {
+        "Name": "libsemanage",
+        "NamespaceName": "debian:9",
+        "Version": "2.6-2"
+      },
+      {
+        "Name": "grep",
+        "NamespaceName": "debian:9",
+        "Version": "2.27-2"
+      },
+      {
+        "Name": "libselinux",
+        "NamespaceName": "debian:9",
+        "Version": "2.6-3"
+      },
+      {
+        "Name": "ustr",
+        "NamespaceName": "debian:9",
+        "Version": "1.0.4-6"
+      },
+      {
+        "Name": "jbigkit",
+        "NamespaceName": "debian:9",
+        "Version": "2.1-3.1",
+        "vulnerabilities": [
+          {
+            "Name": "CVE-2017-9937",
+            "NamespaceName": "debian:9",
+            "Description": "In LibTIFF 4.0.8, there is a memory malloc failure in tif_jbig.c. A crafted TIFF document can lead to an abort resulting in a remote denial of service attack.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-9937",
+            "Severity": "Negligible",
+            "featureName": "jbigkit"
+          }
+        ]
+      },
+      {
+        "Name": "openssl",
+        "NamespaceName": "debian:9",
+        "Version": "1.1.0f-3+deb9u2",
+        "vulnerabilities": [
+          {
+            "Name": "CVE-2018-0737",
+            "NamespaceName": "debian:9",
+            "Description": "The OpenSSL RSA Key generation algorithm has been shown to be vulnerable to a cache timing side channel attack. An attacker with sufficient access to mount cache timing attacks during the RSA key generation process could recover the private key. Fixed in OpenSSL 1.1.0i-dev (Affected 1.1.0-1.1.0h). Fixed in OpenSSL 1.0.2p-dev (Affected 1.0.2b-1.0.2o).",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2018-0737",
+            "Severity": "Low",
+            "featureName": "openssl"
+          },
+          {
+            "Name": "CVE-2010-0928",
+            "NamespaceName": "debian:9",
+            "Description": "OpenSSL 0.9.8i on the Gaisler Research LEON3 SoC on the Xilinx Virtex-II Pro FPGA uses a Fixed Width Exponentiation (FWE) algorithm for certain signature calculations, and does not verify the signature before providing it to a caller, which makes it easier for physically proximate attackers to determine the private key via a modified supply voltage for the microprocessor, related to a \"fault-based attack.\"",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2010-0928",
+            "Severity": "Negligible",
+            "featureName": "openssl"
+          },
+          {
+            "Name": "CVE-2017-3738",
+            "NamespaceName": "debian:9",
+            "Description": "There is an overflow bug in the AVX2 Montgomery multiplication procedure used in exponentiation with 1024-bit moduli. No EC algorithms are affected. Analysis suggests that attacks against RSA and DSA as a result of this defect would be very difficult to perform and are not believed likely. Attacks against DH1024 are considered just feasible, because most of the work necessary to deduce information about a private key may be performed offline. The amount of resources required for such an attack would be significant. However, for an attack on TLS to be meaningful, the server would have to share the DH1024 private key among multiple clients, which is no longer an option since CVE-2016-0701. This only affects processors that support the AVX2 but not ADX extensions like Intel Haswell (4th generation). Note: The impact from this issue is similar to CVE-2017-3736, CVE-2017-3732 and CVE-2015-3193. OpenSSL version 1.0.2-1.0.2m and 1.1.0-1.1.0g are affected. Fixed in OpenSSL 1.0.2n. Due to the low severity of this issue we are not issuing a new release of OpenSSL 1.1.0 at this time. The fix will be included in OpenSSL 1.1.0h when it becomes available. The fix is also available in commit e502cc86d in the OpenSSL git repository.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-3738",
+            "Severity": "Medium",
+            "featureName": "openssl"
+          },
+          {
+            "Name": "CVE-2007-6755",
+            "NamespaceName": "debian:9",
+            "Description": "The NIST SP 800-90A default statement of the Dual Elliptic Curve Deterministic Random Bit Generation (Dual_EC_DRBG) algorithm contains point Q constants with a possible relationship to certain \"skeleton key\" values, which might allow context-dependent attackers to defeat cryptographic protection mechanisms by leveraging knowledge of those values.  NOTE: this is a preliminary CVE for Dual_EC_DRBG; future research may provide additional details about point Q and associated attacks, and could potentially lead to a RECAST or REJECT of this CVE.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2007-6755",
+            "Severity": "Negligible",
+            "featureName": "openssl"
+          }
+        ]
+      },
+      {
+        "Name": "libxml2",
+        "NamespaceName": "debian:9",
+        "Version": "2.9.4+dfsg1-2.2+deb9u2",
+        "vulnerabilities": [
+          {
+            "Name": "CVE-2017-18258",
+            "NamespaceName": "debian:9",
+            "Description": "The xz_head function in xzlib.c in libxml2 before 2.9.6 allows remote attackers to cause a denial of service (memory consumption) via a crafted LZMA file, because the decoder functionality does not restrict memory usage to what is required for a legitimate file.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-18258",
+            "Severity": "Medium",
+            "featureName": "libxml2"
+          },
+          {
+            "Name": "CVE-2017-5130",
+            "NamespaceName": "debian:9",
+            "Description": "An integer overflow in xmlmemory.c in libxml2 before 2.9.5, as used in Google Chrome prior to 62.0.3202.62 and other products, allowed a remote attacker to potentially exploit heap corruption via a crafted XML file.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-5130",
+            "Severity": "Medium",
+            "featureName": "libxml2"
+          },
+          {
+            "Name": "CVE-2017-5969",
+            "NamespaceName": "debian:9",
+            "Description": "** DISPUTED ** libxml2 2.9.4, when used in recover mode, allows remote attackers to cause a denial of service (NULL pointer dereference) via a crafted XML document.  NOTE: The maintainer states \"I would disagree of a CVE with the Recover parsing option which should only be used for manual recovery at least for XML parser.\"",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-5969",
+            "Severity": "Low",
+            "featureName": "libxml2"
+          },
+          {
+            "Name": "CVE-2016-9318",
+            "NamespaceName": "debian:9",
+            "Description": "libxml2 2.9.4 and earlier, as used in XMLSec 1.2.23 and earlier and other products, does not offer a flag directly indicating that the current document may be read but other files may not be opened, which makes it easier for remote attackers to conduct XML External Entity (XXE) attacks via a crafted document.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2016-9318",
+            "Severity": "Medium",
+            "featureName": "libxml2"
+          },
+          {
+            "Name": "CVE-2017-8872",
+            "NamespaceName": "debian:9",
+            "Description": "The htmlParseTryOrFinish function in HTMLparser.c in libxml2 2.9.4 allows attackers to cause a denial of service (buffer over-read) or information disclosure.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-8872",
+            "Severity": "Medium",
+            "featureName": "libxml2"
+          },
+          {
+            "Name": "CVE-2017-16932",
+            "NamespaceName": "debian:9",
+            "Description": "parser.c in libxml2 before 2.9.5 does not prevent infinite recursion in parameter entities.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-16932",
+            "Severity": "Medium",
+            "featureName": "libxml2"
+          }
+        ]
+      },
+      {
+        "Name": "tar",
+        "NamespaceName": "debian:9",
+        "Version": "1.29b-1.1",
+        "vulnerabilities": [
+          {
+            "Name": "CVE-2005-2541",
+            "NamespaceName": "debian:9",
+            "Description": "Tar 1.15.1 does not properly warn the user when extracting setuid or setgid files, which may allow local users or remote attackers to gain privileges.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2005-2541",
+            "Severity": "Negligible",
+            "featureName": "tar"
+          }
+        ]
+      },
+      {
+        "Name": "gzip",
+        "NamespaceName": "debian:9",
+        "Version": "1.6-5"
+      },
+      {
+        "Name": "libcap-ng",
+        "NamespaceName": "debian:9",
+        "Version": "0.7.7-3"
+      },
+      {
+        "Name": "glibc",
+        "NamespaceName": "debian:9",
+        "Version": "2.24-11+deb9u3",
+        "vulnerabilities": [
+          {
+            "Name": "CVE-2017-1000409",
+            "NamespaceName": "debian:9",
+            "Description": "A buffer overflow in glibc 2.5 (released on September 29, 2006) and can be triggered through the LD_LIBRARY_PATH environment variable. Please note that many versions of glibc are not vulnerable to this issue if patched for CVE-2017-1000366.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-1000409",
+            "Severity": "Medium",
+            "featureName": "glibc"
+          },
+          {
+            "Name": "CVE-2017-1000408",
+            "NamespaceName": "debian:9",
+            "Description": "A memory leak in glibc 2.1.1 (released on May 24, 1999) can be reached and amplified through the LD_HWCAP_MASK environment variable. Please note that many versions of glibc are not vulnerable to this issue if patched for CVE-2017-1000366.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-1000408",
+            "Severity": "High",
+            "featureName": "glibc"
+          },
+          {
+            "Name": "CVE-2018-1000001",
+            "NamespaceName": "debian:9",
+            "Description": "In glibc 2.26 and earlier there is confusion in the usage of getcwd() by realpath() which can be used to write before the destination buffer leading to a buffer underflow and potential code execution.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2018-1000001",
+            "Severity": "High",
+            "featureName": "glibc"
+          },
+          {
+            "Name": "CVE-2018-6551",
+            "NamespaceName": "debian:9",
+            "Description": "The malloc implementation in the GNU C Library (aka glibc or libc6), from version 2.24 to 2.26 on powerpc, and only in version 2.26 on i386, did not properly handle malloc calls with arguments close to SIZE_MAX and could return a pointer to a heap region that is smaller than requested, eventually leading to heap corruption.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2018-6551",
+            "Severity": "High",
+            "featureName": "glibc"
+          },
+          {
+            "Name": "CVE-2018-6485",
+            "NamespaceName": "debian:9",
+            "Description": "An integer overflow in the implementation of the posix_memalign in memalign functions in the GNU C Library (aka glibc or libc6) 2.26 and earlier could cause these functions to return a pointer to a heap area that is too small, potentially leading to heap corruption.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2018-6485",
+            "Severity": "High",
+            "featureName": "glibc"
+          },
+          {
+            "Name": "CVE-2016-10228",
+            "NamespaceName": "debian:9",
+            "Description": "The iconv program in the GNU C Library (aka glibc or libc6) 2.25 and earlier, when invoked with the -c option, enters an infinite loop when processing invalid multi-byte input sequences, leading to a denial of service.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2016-10228",
+            "Severity": "Medium",
+            "featureName": "glibc"
+          },
+          {
+            "Name": "CVE-2017-15670",
+            "NamespaceName": "debian:9",
+            "Description": "The GNU C Library (aka glibc or libc6) before 2.27 contains an off-by-one error leading to a heap-based buffer overflow in the glob function in glob.c, related to the processing of home directories using the ~ operator followed by a long string.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-15670",
+            "Severity": "Low",
+            "featureName": "glibc"
+          },
+          {
+            "Name": "CVE-2017-16997",
+            "NamespaceName": "debian:9",
+            "Description": "elf/dl-load.c in the GNU C Library (aka glibc or libc6) 2.19 through 2.26 mishandles RPATH and RUNPATH containing $ORIGIN for a privileged (setuid or AT_SECURE) program, which allows local users to gain privileges via a Trojan horse library in the current working directory, related to the fillin_rpath and decompose_rpath functions. This is associated with misinterpretion of an empty RPATH/RUNPATH token as the \"./\" directory. NOTE: this configuration of RPATH/RUNPATH for a privileged program is apparently very uncommon; most likely, no such program is shipped with any common Linux distribution.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-16997",
+            "Severity": "High",
+            "featureName": "glibc"
+          },
+          {
+            "Name": "CVE-2017-12132",
+            "NamespaceName": "debian:9",
+            "Description": "The DNS stub resolver in the GNU C Library (aka glibc or libc6) before version 2.26, when EDNS support is enabled, will solicit large UDP responses from name servers, potentially simplifying off-path DNS spoofing attacks due to IP fragmentation.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-12132",
+            "Severity": "Medium",
+            "featureName": "glibc"
+          },
+          {
+            "Name": "CVE-2010-4051",
+            "NamespaceName": "debian:9",
+            "Description": "The regcomp implementation in the GNU C Library (aka glibc or libc6) through 2.11.3, and 2.12.x through 2.12.2, allows context-dependent attackers to cause a denial of service (application crash) via a regular expression containing adjacent bounded repetitions that bypass the intended RE_DUP_MAX limitation, as demonstrated by a {10,}{10,}{10,}{10,}{10,} sequence in the proftpd.gnu.c exploit for ProFTPD, related to a \"RE_DUP_MAX overflow.\"",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2010-4051",
+            "Severity": "Negligible",
+            "featureName": "glibc"
+          },
+          {
+            "Name": "CVE-2010-4052",
+            "NamespaceName": "debian:9",
+            "Description": "Stack consumption vulnerability in the regcomp implementation in the GNU C Library (aka glibc or libc6) through 2.11.3, and 2.12.x through 2.12.2, allows context-dependent attackers to cause a denial of service (resource exhaustion) via a regular expression containing adjacent repetition operators, as demonstrated by a {10,}{10,}{10,}{10,} sequence in the proftpd.gnu.c exploit for ProFTPD.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2010-4052",
+            "Severity": "Negligible",
+            "featureName": "glibc"
+          },
+          {
+            "Name": "CVE-2015-8985",
+            "NamespaceName": "debian:9",
+            "Description": "The pop_fail_stack function in the GNU C Library (aka glibc or libc6) allows context-dependent attackers to cause a denial of service (assertion failure and application crash) via vectors related to extended regular expression processing.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2015-8985",
+            "Severity": "Negligible",
+            "featureName": "glibc"
+          },
+          {
+            "Name": "CVE-2017-15671",
+            "NamespaceName": "debian:9",
+            "Description": "The glob function in glob.c in the GNU C Library (aka glibc or libc6) before 2.27, when invoked with GLOB_TILDE, could skip freeing allocated memory when processing the ~ operator with a long user name, potentially leading to a denial of service (memory leak).",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-15671",
+            "Severity": "Low",
+            "featureName": "glibc"
+          },
+          {
+            "Name": "CVE-2010-4756",
+            "NamespaceName": "debian:9",
+            "Description": "The glob implementation in the GNU C Library (aka glibc or libc6) allows remote authenticated users to cause a denial of service (CPU and memory consumption) via crafted glob expressions that do not match any pathnames, as demonstrated by glob expressions in STAT commands to an FTP daemon, a different vulnerability than CVE-2010-2632.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2010-4756",
+            "Severity": "Negligible",
+            "featureName": "glibc"
+          },
+          {
+            "Name": "CVE-2017-15804",
+            "NamespaceName": "debian:9",
+            "Description": "The glob function in glob.c in the GNU C Library (aka glibc or libc6) before 2.27 contains a buffer overflow during unescaping of user names with the ~ operator.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-15804",
+            "Severity": "Low",
+            "featureName": "glibc"
+          },
+          {
+            "Name": "CVE-2017-8804",
+            "NamespaceName": "debian:9",
+            "Description": "The xdr_bytes and xdr_string functions in the GNU C Library (aka glibc or libc6) 2.25 mishandle failures of buffer deserialization, which allows remote attackers to cause a denial of service (virtual memory allocation, or memory consumption if an overcommit setting is not used) via a crafted UDP packet to port 111, a related issue to CVE-2017-8779.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-8804",
+            "Severity": "High",
+            "featureName": "glibc"
+          },
+          {
+            "Name": "CVE-2017-12133",
+            "NamespaceName": "debian:9",
+            "Description": "The DNS stub resolver in the GNU C Library (glibc) before version 2.26, when EDNS support is enabled, will solicit large UDP responses from name servers, potentially simplifying off-path DNS spoofing attackers due to IP fragmentation.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-12133",
+            "Severity": "Medium",
+            "featureName": "glibc"
+          }
+        ]
+      },
+      {
+        "Name": "fonts-dejavu",
+        "NamespaceName": "debian:9",
+        "Version": "2.37-1"
+      },
+      {
+        "Name": "adduser",
+        "NamespaceName": "debian:9",
+        "Version": "3.115"
+      },
+      {
+        "Name": "nginx-module-njs",
+        "NamespaceName": "debian:9",
+        "Version": "1.13.12.0.2.0-1~stretch"
+      },
+      {
+        "Name": "sysvinit",
+        "NamespaceName": "debian:9",
+        "Version": "2.88dsf-59.9"
+      },
+      {
+        "Name": "e2fsprogs",
+        "NamespaceName": "debian:9",
+        "Version": "1.43.4-2"
+      },
+      {
+        "Name": "debconf",
+        "NamespaceName": "debian:9",
+        "Version": "1.5.61"
+      },
+      {
+        "Name": "libgcrypt20",
+        "NamespaceName": "debian:9",
+        "Version": "1.7.6-2+deb9u2",
+        "vulnerabilities": [
+          {
+            "Name": "CVE-2018-6829",
+            "NamespaceName": "debian:9",
+            "Description": "cipher/elgamal.c in Libgcrypt through 1.8.2, when used to encrypt messages directly, improperly encodes plaintexts, which allows attackers to obtain sensitive information by reading ciphertext data (i.e., it does not have semantic security in face of a ciphertext-only attack). The Decisional Diffie-Hellman (DDH) assumption does not hold for Libgcrypt's ElGamal implementation.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2018-6829",
+            "Severity": "Negligible",
+            "featureName": "libgcrypt20"
+          }
+        ]
+      },
+      {
+        "Name": "libjpeg-turbo",
+        "NamespaceName": "debian:9",
+        "Version": "1:1.5.1-2",
+        "vulnerabilities": [
+          {
+            "Name": "CVE-2017-15232",
+            "NamespaceName": "debian:9",
+            "Description": "libjpeg-turbo 1.5.2 has a NULL Pointer Dereference in jdpostct.c and jquant1.c via a crafted JPEG file.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-15232",
+            "Severity": "Low",
+            "featureName": "libjpeg-turbo"
+          }
+        ]
+      },
+      {
+        "Name": "shadow",
+        "NamespaceName": "debian:9",
+        "Version": "1:4.4-4.1",
+        "vulnerabilities": [
+          {
+            "Name": "CVE-2018-7169",
+            "NamespaceName": "debian:9",
+            "Description": "An issue was discovered in shadow 4.5. newgidmap (in shadow-utils) is setuid and allows an unprivileged user to be placed in a user namespace where setgroups(2) is permitted. This allows an attacker to remove themselves from a supplementary group, which may allow access to certain filesystem paths if the administrator has used \"group blacklisting\" (e.g., chmod g-rwx) to restrict access to paths. This flaw effectively reverts a security feature in the kernel (in particular, the /proc/self/setgroups knob) to prevent this sort of privilege escalation.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2018-7169",
+            "Severity": "Medium",
+            "featureName": "shadow"
+          },
+          {
+            "Name": "CVE-2007-5686",
+            "NamespaceName": "debian:9",
+            "Description": "initscripts in rPath Linux 1 sets insecure permissions for the /var/log/btmp file, which allows local users to obtain sensitive information regarding authentication attempts.  NOTE: because sshd detects the insecure permissions and does not log certain events, this also prevents sshd from logging failed authentication attempts by remote attackers.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2007-5686",
+            "Severity": "Negligible",
+            "featureName": "shadow"
+          },
+          {
+            "Name": "CVE-2013-4235",
+            "NamespaceName": "debian:9",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2013-4235",
+            "Severity": "Negligible",
+            "featureName": "shadow"
+          },
+          {
+            "Name": "CVE-2017-12424",
+            "NamespaceName": "debian:9",
+            "Description": "In shadow before 4.5, the newusers tool could be made to manipulate internal data structures in ways unintended by the authors. Malformed input may lead to crashes (with a buffer overflow or other memory corruption) or other unspecified behaviors. This crosses a privilege boundary in, for example, certain web-hosting environments in which a Control Panel allows an unprivileged user account to create subaccounts.",
+            "Link": "https://security-tracker.debian.org/tracker/CVE-2017-12424",
+            "Severity": "High",
+            "featureName": "shadow"
+          }
+        ]
+      }
+    ]
+  }
+}

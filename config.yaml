@@ -1,0 +1,51 @@
+title: Secure your Kubernetes Cluster
+baseurl: https://kubeshield.app/
+languageCode: en-us
+pluralizeListTitles: false
+pygmentsStyle: "monokai"
+pygmentsUseClasses: false
+disqusShortname: appscode
+staticdir: "build"
+taxonomies:
+  tag: "tags"
+  category: "categories"
+  author: "authors"
+params:
+  author: AppsCode Team
+  date_format: Mon, Jan 2, 2006
+  description: Secure your Kubernetes Cluster
+  ga_id: UA-62096468-4
+  tagmanager_id: GTM-52KJSD
+  email: support@appscode.com
+  logo: /images/logo.svg
+  twitterstatus_url: https://twitter.com/AppsCodeStatus
+  twitter_url: https://twitter.com/KubeShield
+  facebook_url: https://www.facebook.com/appscode
+  github_url: https://github.com/kubeshield
+  docker_url: https://hub.docker.com/u/kubeshield
+  youtube_url: https://www.youtube.com/c/AppsCodeInc
+  contact_email: kubeshield@appscode.com
+  sales_email: sales@appscode.com
+  contact_phone: +1 (650) 241-8486
+menu:
+  main:
+    - Name:
+      Pre: "<i class='fa fa-github'></i>"
+      Weight: 3
+      Identifier: "GitHub"
+      URL: "https://github.com/kubeshield"
+    - Name:
+      Pre: "<i class='fa fa-twitter'></i>"
+      Weight: 4
+      Identifier: "twitter"
+      URL: "https://twitter.com/KubeShield"
+    - Name:
+      Pre: "<i class='fa fa-slack'></i>"
+      Weight: 6
+      Identifier: "slack"
+      URL: "https://slack.appscode.com"
+    - Name:
+      Pre: "<i class='fa fa-forumbee'></i>"
+      Weight: 7
+      Identifier: "forum"
+      URL: "http://discourse.appscode.com"

@@ -1,0 +1,237 @@
+#main-header-area {
+  background: url("../../images/banner-bg.svg") no-repeat scroll center center/cover border-box;
+  background-position: initial;
+  @media only screen and (max-width: 767px) {
+    background-position: inherit;
+    background-size: cover;
+  }
+}
+.main-banner {
+  .banner-width {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .ac-inner-banner {
+    padding: 10% 0;
+    position: relative;
+    @media only screen and (max-width: 767px) {
+      padding: 30px 0;
+    }
+    .banner-title {
+      .news {
+        @media only screen and (max-width: 767px) {
+          background: none;
+          padding: 0;
+          margin: 0;
+        }
+        display: inline-block;
+        background-color: rgba(255, 255, 255, .1);
+        border-radius: 100px;
+        margin-bottom: 20px;
+        padding: 4px 10px;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 200;
+        text-decoration: none;
+        a {
+          color: #fff;
+          text-decoration: none;
+          letter-spacing: 0.5px;
+          text-transform: capitalize;
+          background: transparent;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        &:before {
+          display: inline-block;
+          content: "";
+          height: 8px;
+          width: 8px;
+          background-color: #06d79c;
+          border-radius: 50%;
+          margin-right: 5px;
+        }
+      }
+      .type-wrap {
+        font-size: 50px;
+        color: #fff;
+        font-weight: 900;
+        line-height: 80px;
+        padding: 0;
+        margin: 0;
+      }
+      h1 {
+        font-size: 50px;
+        color: #fff;
+        font-weight: 900;
+        line-height: 80px;
+        
+        @media only screen and (max-width: 767px) {
+          font-size: 30px;
+          line-height: 40px;
+        }
+      }
+      h5 {
+        font-size: 20px;
+        @media only screen and (max-width: 767px) {
+          width: 100%;
+          font-size: 16px;
+          line-height: 25px;
+        }
+        font-size: 18px;
+        color: #fff;
+        font-weight: 500;
+        line-height: 30px;
+        width: 70%;
+        padding: 0;
+        margin: 0;
+      }
+      .slider-link{
+        display: block;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        @media only screen and (max-width: 400px) {
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+        @media only screen and (max-width: 599px) {
+          margin-top: 50px;
+        }
+        a {
+          padding: 10px 20px;
+          font-size: 16px;
+          font-weight: 600;
+          border-radius: 4px;
+          text-transform: capitalize;
+          cursor: pointer;
+          text-align: center;
+          transition: all .15s ease-out;
+          border: none;
+          outline: none;
+          text-decoration: none;
+          @media only screen and (max-width: 767px) {
+            font-size: 12px;
+          }
+          &.get-started {
+            box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+            color: #fff;
+            background: #3bb878;
+            @media only screen and (max-width: 767px) {
+              }
+            &:hover{
+              transform: translateY(-2px);
+              box-shadow: 0 4px 10px rgba(50,50,93,.11), 0 1px 6px rgba(0,0,0,.08);
+            }
+          }
+          &.how-it-works{
+            color: #fff;
+            &:hover{
+              transform: translateY(-2px);
+            }
+          }
+        }
+      }
+    }
+    .banner-form-area {
+      .banner-form {
+        padding: 50px 0 20px 0;
+
+        input.banner-mail-box {
+          width: 57%;
+          height: 60px;
+          padding: 0 20px;
+          border-radius: 3px;
+          border: 0;
+          font-size: 16px;
+          font-weight: 400;
+          color: #999db2;
+          @media only screen and (max-width: 767px) {
+            width: 100%;
+            margin-bottom: 20px;
+            height: 50px;
+          }
+        }
+        label#-error {
+          display: block;
+          max-width: 100%;
+          font-weight: 400;
+          color: #f00;
+          position: absolute;
+          @media only screen and (max-width: 767px) {
+            position: relative;
+            top: -5px;
+          }
+        }
+        button.submit {
+          vertical-align: top;
+          background: #edfff7;
+          padding: 17px 40px;
+          color: #3bb878;
+          font-weight: 500;
+          border: 0;
+          font-size: 20px;
+          border-radius: 3px;
+          outline: 0;
+          margin-left: 15px;
+          @media only screen and (max-width: 767px) {
+            width: 100%;
+            margin-left: 0;
+            font-size: 18px;
+            padding: 12.5px 40px;
+          }
+        }
+      }
+
+      .free-trial {
+        margin-top: 10px;
+        @media only screen and (max-width: 767px) {
+          text-align: center;
+        }
+        .trial {
+          @media only screen and (max-width: 767px) {
+            text-align: center;
+            background: none;
+          }
+          display: inline-block;
+          background-color: rgba(255, 255, 255, .1);
+          border-radius: 3px;
+          padding: 2px 10px;
+          color: #c8dbff;
+          font-size: 14px;
+          font-weight: 500;
+          text-decoration: none;
+          margin-right: 15px;
+        }
+        span {
+          font-size: 14px;
+          font-weight: 500;
+          color: #87abf2;
+          a {
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            text-transform: capitalize;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+    .banner-abstract {
+      @media only screen and (max-width: 400px) {
+       display: none;
+      }
+    }
+  }
+}
+.banner-abstract {
+  height: 400px;
+  @media only screen and (max-width: 640px) {
+    margin: 40px 0;
+  }
+  @media only screen and (max-width: 769px) {
+    height: auto;   
+  }
+}

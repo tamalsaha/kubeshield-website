@@ -1,0 +1,169 @@
+
+
+<section id="footer">
+    <div class="container">
+        {{ partial "globalFooterCards.html" .}}
+        <div class="ac-footer">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="ac-ft-list">
+                        <h4>Offerings</h4>
+                        <ul>
+                            <li><a href="/products/">Products</a></li>
+                            <li><a href="/services/">Services</a></li>
+                            <!-- <li><a href="/cli/">CLI</a></li> -->
+                            <li><a href="/opensource/">Open Source</a></li>
+                            <!-- <li><a href="https://status.appscode.com" target="_blank">Uptime & Status</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="ac-ft-list">
+                        <h4>Help</h4>
+                        <ul>
+                            <!-- <li><a href="/docs/">Docs</a></li> -->
+                            <!-- <li><a href="/api/">API</a></li> -->
+                            <li><a href="https://discourse.appscode.com" target="_blank">Forum</a></li>
+                            <li><a href="https://slack.appscode.com" target="_blank">Slack</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="ac-ft-list">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="/about/">About Us</a></li>
+                            <li><a href="https://blog.byte.builders/">Blog</a></li>
+                            <li><a href="/contact/sales">Sales Inquiry</a></li>
+                            <li><a href="/contact/">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="ac-ft-list">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="/legal/tos/">Terms of Service</a></li>
+                            <li><a href="/legal/privacy-policy/">Privacy Policy</a></li>
+                            <li><a href="/legal/sla/">Service Level Agreement</a></li>
+                            <li><a href="/legal/security/">Security</a></li>
+                            <!-- <li><a href="/faq/">FAQ</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="ac-ft-list">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="{{ .Site.Params.twitter_url }}"><i class="fa fa-twitter"></i>Twitter</a></li>
+                            <li><a href="{{ .Site.Params.facebook_url }}"><i class="fa fa-facebook"></i>Facebook</a></li>
+                            <li><a href="{{ .Site.Params.github_url }}"><i class="fa fa-github"></i>GitHub</a></li>
+                            <li><a href="{{ .Site.Params.docker_url }}"><i class="icon-docker"></i>Docker</a></li>
+                            <li><a href="{{ .Site.Params.youtube_url }}"><i class="fa fa-youtube"></i>Youtube</a></li>
+                            <!--<li><a href="#"><i class="ac-docker"><img src="/images/docker.svg"> </i>Docker</a></li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="ac-ft-logo text-center">
+                    <a href=""><img src="/images/logo-color.svg"></a>
+                    <P>All rights reserved © 2018. Appscode, Inc..&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="/legal/tos">Regulations</a> and <a href="/legal/privacy-policy">Cookies Policy</a> </P>
+                    <P><b>{{ .Site.Params.contact_phone }}</b>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href="mailto:{{ .Site.Params.contact_email }}">{{ .Site.Params.contact_email }}</a> </P>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- End our Project -->
+
+<script type="text/javascript">
+    $('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
+    var amountScrolled = 100;
+
+    $(window).scroll(function() {
+        if ( $(window).scrollTop() > amountScrolled ) {
+          $('a.back-to-top').fadeIn('slow');
+        } else {
+          $('a.back-to-top').fadeOut('slow');
+        }
+    });
+
+    $('a.back-to-top').click(function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 700);
+        return false;
+    });
+</script>
+
+<!--new cookie-->
+
+<div class="ac-cookies collapse cookie-notice">
+    <button class="ac-cookies-ok accept-cookie">OK</button>
+    <span class="ac-cookies-message">
+        We use cookies to ensure that we give you the best experience on our website. By using this site, you agree to its use of cookies.
+        <a href="/legal/privacy-policy/" target="_blank" role="button">Learn more</a>
+    </span>
+</div>
+
+</div><!-- End Page Wrapper, Full Width -->
+
+<!-- Change cookie name everytime privacy policy changes. -->
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+        if (Cookies && Cookies.get('COOKIE_ACK') !== 'yes') {
+            $(".cookie-notice").collapse('show');
+        }
+        $(".accept-cookie").click(function() {
+            Cookies.set('COOKIE_ACK', 'yes', { expires: 3650 });
+            $(".cookie-notice").collapse('hide');
+        });
+    });
+</script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/5821e34b18d9f16af02864b7/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
+
+<script>
+  const scrollToGetTheIDVisible = function() {
+    const hash = window.location.hash;
+    if (hash) {
+      const offset = $(hash).offset();
+      console.log('offset: ', offset);
+      window.scrollTo(0, Math.floor(offset.top) - 80);
+    }
+  }
+
+  $(document).ready(function() {
+    // handle for browser refresh
+    setTimeout(function(){
+      scrollToGetTheIDVisible();
+    }, 300)
+
+    // handle when click on any anchor
+    $(document).on('click', 'a', function() {
+      setTimeout(function() {
+        scrollToGetTheIDVisible();
+      }, 300);
+    });
+  });
+</script>
+
+</body>
+</html>

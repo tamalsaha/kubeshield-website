@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: labels-job
+  namespace: kube-system
+  labels:
+    app: scanner
+spec:
+  template:
+    metadata:
+      labels:
+        app: scanner
+    spec:
+      containers:
+      - name: labels
+        image: shudipta/labels-vuln
+        ports:
+        - containerPort: 80
+      restartPolicy: Never

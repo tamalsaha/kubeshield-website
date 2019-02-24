@@ -1,0 +1,76 @@
+
+{{ partial "header.html" .}}
+
+<section class="inner-header-area">
+    {{ partial "menu.html" . }}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="inner-banner">
+                    <h1>Subscribe to our free technical newsletter!</h1>
+                    <p>Join thousands of subscribers and stay up-to-date on AppsCode.</p>
+                    <!-- Begin MailChimp Signup Form -->
+                    <div id="mc_embed_signup" class="banner-subscribers">
+                        <span role="ack"></span>
+                        <form action="https://appscode.us17.list-manage.com/subscribe/post?u=feb2bf31969a951e7449048a3&amp;id=82fb19acb9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate style="display: inline;" role="email">
+                            <div id="mc_embed_signup_scroll" class="subscribers-email">
+                                <input type="email" value="" name="EMAIL" class="form-control subscribe-email email" id="mce-EMAIL" placeholder="email address" required>
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_feb2bf31969a951e7449048a3_82fb19acb9" tabindex="-1" value=""></div>
+                            </div>
+                            <button id="mc-embedded-subscribe" type="submit" name="subscribe" class="btn mail-subscribe">Subscribe</button>
+                        </form>
+                    </div>
+                    <!--End mc_embed_signup-->
+
+                    <div class="find-us-blog-home">
+                        <ul>
+                            <li><a href="{{ .Site.Params.twitter_url }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="{{ .Site.Params.facebook_url }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="{{ .Site.Params.github_url }}" target="_blank"><i class="fa fa-github"></i></a></li>
+                            <li><a href="{{ .Site.Params.docker_url }}" target="_blank"><i class="icon-docker"></i></a></li>
+                            <li><a href="/blog/index.xml" target="_blank"><i class="fa fa-rss"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="list-post">
+    <div class="container">
+        <div class="row">
+            <div class="blog">
+                {{ range first 5 .Paginator.Pages }}
+                <div class="col-md-6">
+                    <div class="blog-list">
+                        <a href="{{ .RelPermalink }}">
+                            {{ if isset .Params "image" }}
+                            <div class="post-img">
+                                <img alt="" src="{{ .Params.image }}">
+                            </div>
+                            {{ else }}
+                            <img class=" border-img-hover" alt="" src="{{ .Params.preview }}">
+                            {{ end }}
+                        </a>
+                        <p class="post-meta">
+                            <b>on</b> {{ dateFormat $.Site.Params.date_format .Date }}
+                        </p>
+
+                        <div class="post-description">
+                            <a class="blog-title" href="{{ .RelPermalink }}"><h3>{{ title .Title }}</h3></a>
+                            {{ .Summary }}
+                            <div class="blog-categories">
+                                {{ partial "categories.html" . }}
+                            </div>
+                            <!--<a style="margin-top: 20px; display: block" href="{{ .RelPermalink }}">Read more →</a>-->
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ partial "footer.html" . }}

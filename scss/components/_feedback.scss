@@ -1,0 +1,29 @@
+
+.need-help {
+  padding: 50px 0;
+  .ac-feedback {
+    a {
+      background: #edfff7;
+      color: #3bb878;
+      white-space: nowrap;
+      display: inline-block;
+      height: 50px;
+      line-height: 50px;
+      padding: 0 20px;
+      box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+      border-radius: 4px;
+      font-size: 15px;
+      outline: none;
+      font-weight: 500;
+      letter-spacing: .025em;
+      text-decoration: none;
+      transition: all .15s ease;
+      &:hover, &:active, &:focus {
+        background-color: #60db9c;
+        color: #fff;
+        transform: translateY(-1px);
+        box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
+      }
+    }
+  }
+}

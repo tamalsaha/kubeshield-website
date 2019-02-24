@@ -1,0 +1,46 @@
+// AppsCode || AppsCode Web Sass Theme
+// Author: AppsCode
+// Version: 0.0.2
+// BASE - Base styles, variables, mixins, etc
+
+  //base
+  @import 'base/_variables';
+  @import 'base/_base';
+
+  //layouts
+  @import 'layouts/navbar';
+  @import 'layouts/header';
+  @import 'layouts/home';
+  @import 'layouts/footer';
+  @import 'layouts/inner-banner';
+  @import 'layouts/subscribers';
+  @import 'layouts/section-menu';
+  @import 'layouts/toolkit';
+  @import 'layouts/signin';
+  @import 'layouts/os-product';
+  @import 'layouts/product-section-menu';
+
+  //components
+  @import 'components/testimonials';
+  @import 'components/back-to-top';
+  @import 'components/brainTree';
+  @import 'components/cookies';
+  @import 'components/feedback';
+  @import 'components/schedule-demo';
+  @import 'components/swagger-ui';
+  @import 'components/docs';
+  @import 'components/sidbar';
+  @import 'components/social';
+  @import 'components/contact';
+  @import 'components/blog';
+  @import 'components/download';
+  @import 'components/services';
+  @import 'components/global-notification';
+
+  //modules
+  @import 'modules/article';
+  @import 'modules/product';
+  @import 'modules/pricing';
+  @import 'modules/faq-questions';
+  @import 'modules/learn';
+  

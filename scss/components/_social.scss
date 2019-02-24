@@ -1,0 +1,35 @@
+.social-medium {
+  display: inline-block;
+  padding: 20px;
+  display: inline-block;
+  padding: 60px 20px;
+  width: 85%;
+  border-radius: 5px;
+  &:hover {
+    outline: 0;
+    box-shadow: 0 10px 30px 0 rgba(119,135,147,0.1);
+    transition: color .3s ease,background-color .3s ease;
+    transition-property: box-shadow;
+    text-decoration: none;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    h4 {
+      margin-bottom: 10px;
+    }
+    i {
+      border-radius: 50px;
+      height: 70px;
+      width: 70px;
+      text-align: center;
+      vertical-align: middle;
+      padding: 18px;
+      color: #3d78e5;
+      font-weight: 800;
+      font-size: 25px;
+      margin-bottom: 10px;
+      box-shadow: -3px -7px 10px 0 rgba(229,230,232,.15);
+    }
+  }
+}

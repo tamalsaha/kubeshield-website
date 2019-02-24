@@ -1,0 +1,61 @@
+<div class="container-min">
+    <div class="logo-signin text-center">
+        <a class="" href="/"><img src="/images/logo-color.svg"></a>
+    </div>
+    <div class="signup-area">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Tell us about your team!</h3>
+                <p>AppsCode works better with your team</p>
+
+                <form class="email" data-toggle="validator" role="form">
+
+                    <div class="form-group has-feedback">
+                        <label for="subdomain">Team Name &nbsp;<i class="fa fa-info-circle" data-toggle="tooltip" title="Your team name. This could be your department or work-group name."></i> </label>
+                        <input type="text" class="form-control " id="teamname" name="teamname" placeholder="Ex. Bee gees" required>
+                        <!--<span class="glyphicon form-control-feedback" id="teamname1"></span>-->
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subdomain">Team ID &nbsp; <i class="fa fa-info-circle" data-toggle="tooltip" title="Choose you team id. This can't be changed later. Use only letters, numbers & hyphen."></i> </label>
+                        <div class="input-group">
+                            <input type="text" class="form-control  domain-name text-lowercase" id="subdomain" name="subdomain" placeholder="Ex. bee" required>
+                            <div class="input-group-addon domin">.appscode.io</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="product-sku">Product SKU </label>
+                        <select id="product-sku" class="form-control">
+                            {% if subscription %}
+                              {% for product in products %}
+                              <option value="{{ product.sku }}" {%  if product.sku == subscription %} selected {% endif %}>{{ product.displayName }}</option>
+                              {% endfor %}
+                            {% else %}
+                              {% for product in products %}
+                              <option value="{{ product.sku }}">{{ product.displayName }}</option>
+                              {% endfor %}
+                            {% endif %}
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="user-count">User Number &nbsp; <i class="fa fa-info-circle" data-toggle="tooltip" title="Number of user you want to use this domain"></i> </label>
+                        <input id="user-count" type="number" class="form-control" name="user-count" min="1" max="100" placeholder="10" required>
+                    </div>
+
+                    <button id="btn-p2" type="submit" class="continue">Proceed</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="signin-legal">
+        By clicking "Proceed" I agree to AppsCode's <a href="/legal/tos/" target="_blank">Terms of Service</a>
+    </div>
+</div>
+
+<script>
+  $(document).ready(function ($) {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>

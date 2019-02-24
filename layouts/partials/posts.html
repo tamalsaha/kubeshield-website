@@ -1,0 +1,6 @@
+<ul>
+    {{ range first 5 . }}
+    <li><a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a></li>
+    {{ end }}
+</ul>
+

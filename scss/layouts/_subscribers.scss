@@ -1,0 +1,118 @@
+.banner-subscribers {
+  margin-top: 30px;
+  span {
+    letter-spacing: .5px;
+    color: #fff;
+  }
+  .subscribers-email {
+    display: inline-block;
+    padding: 0;
+    width: 400px;
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+    }
+    .subscribe-email {
+      background: $white;
+      border: 0;
+      border-radius: 0;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+      font-weight: 400;
+      outline: 0;
+      height: 50px !important;
+      padding: 10px 12px;
+      width: 100%;
+    }
+  }
+
+  .mail-subscribe {
+    color: $white;
+    background: $color_ocean_green;
+    height: 50px !important;
+    border: 0;
+    border-radius: 0 3px 3px 0;
+    box-shadow: none;
+    left: -5px;
+    top: -2px;
+    font-weight: 400;
+    font-size: 16px;
+    position: relative;
+
+    &:hover {
+      color: $white;
+    }
+    @media only screen and (max-width: 767px) {
+      left: 0 !important;
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+}
+
+// button subscribers area css
+.subscribers-area {
+  padding: 40px 0;
+  h2 {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 600;
+    color: #32325d;
+  }
+  .subscribers {
+    border-radius: 5px;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 10px;
+    text-align: center;
+    .subscribers-email-input {
+      width: 70%;
+      display: inline-block;
+      .subscribe-email {
+        height: 42px;
+        border: 2px solid rgba(0,0,0,.15);
+        &:focus{
+          border-color: #3bb878;
+        }
+      }
+    }
+    .mail-subscribe {
+      width: 28%;
+      color: $white;
+      padding: 6px 10px;
+      cursor: pointer;
+      position: relative;
+      top: -2px;
+      height: 42px;
+      background: $color_ocean_green;
+    }
+  }
+}
+
+// Blog subscribers area css
+.subscribe-blog {
+  padding: 10px;
+  input.subscribers-blog-email {
+    width: 100%;
+    height: 40px;
+    border: 2px solid #ddd;
+    margin-bottom: 20px;
+    box-shadow: none;
+    &:active, &:focus {
+      border: 2px solid #3bb878;
+    }
+  }
+  button.blog-subscribe-submit {
+    width: 100%;
+    border-radius: 3px;
+    color: $white;
+    background: $color_ocean_green;
+    font-size: 14px;
+    padding: 10px;
+    text-transform: capitalize;
+    border: none;
+  }
+}
+
+form.form-inline {
+  display: inline;
+}

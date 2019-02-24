@@ -1,0 +1,168 @@
+{
+  "pkg": [
+    {
+      "sku": "H-TRIAL",
+      "type": "PKG",
+      "sub_type": "USER",
+      "quota_required": "pkg.user",
+      "display_name": "Trial",
+      "pricing_model": "FREE",
+      "subscription_type": "TRIAL",
+      "quota": {
+        "pkg.user": 10,
+        "phabricator.disk_gb": 50,
+        "artifact.disk_gb": 100
+      },
+      "date_started": "2016-02-01T00:00:00.000Z",
+      "date_ended": "2030-01-01T00:00:00.000Z"
+    },
+    {
+      "sku": "P-ONEBOX",
+      "type": "PKG",
+      "sub_type": "USER",
+      "quota_required": "pkg.user",
+      "display_name": "Appscode Onebox Private Installation",
+      "pricing_model": "APM",
+      "subscription_type": "ONEBOX",
+      "quota": {
+        "pkg.user": -1,
+        "phabricator.disk_gb": -1,
+        "artifact.disk_gb": -1
+      },
+      "date_started": "2016-02-01T00:00:00.000Z",
+      "date_ended": "2030-01-01T00:00:00.000Z"
+    },
+    {
+      "sku": "H-ENTERPRISE",
+      "type": "PKG",
+      "sub_type": "USER",
+      "quota_required": "pkg.user",
+      "display_name": "Enterprise",
+      "pricing_model": "APA",
+      "subscription_type": "BETA",
+      "quota": {
+        "pkg.user": -1,
+        "phabricator.disk_gb": -1,
+        "artifact.disk_gb": -1
+      },
+      "date_started": "2016-02-01T00:00:00.000Z",
+      "date_ended": "2030-01-01T00:00:00.000Z"
+    },
+    {
+      "sku": "H-M2M-STARTUP",
+      "type": "PKG",
+      "sub_type": "USER",
+      "quota_required": "pkg.user",
+      "display_name": "Startup",
+      "pricing_model": "M2M",
+      "subscription_type": "STARTUP",
+      "quota": {
+        "pkg.user": 10,
+        "phabricator.disk_gb": 50,
+        "artifact.disk_gb": 100
+      },
+      "date_started": "2016-02-01T00:00:00.000Z",
+      "date_ended": "2030-01-01T00:00:00.000Z"
+    },
+    {
+      "sku": "H-M2M-PROFESSIONAL",
+      "type": "PKG",
+      "sub_type": "USER",
+      "quota_required": "pkg.user",
+      "display_name": "Professional",
+      "pricing_model": "M2M",
+      "subscription_type": "PROFESSIONAL",
+      "quota": {
+        "pkg.user": 100,
+        "phabricator.disk_gb": 0,
+        "artifact.disk_gb": 1000,
+        "app.diffusion": 0,
+        "app.differential": 0,
+        "app.audit": 0,
+        "app.maniphest": 0,
+        "app.pholio": 0,
+        "app.phriction": 0,
+        "app.paste": 0,
+        "app.phurl": 0,
+        "app.ponder": 0,
+        "app.legalpad": 0
+      },
+      "date_started": "2016-02-01T00:00:00.000Z",
+      "date_ended": "2030-01-01T00:00:00.000Z"
+    },
+    {
+      "sku": "H-M2M-BUSINESS",
+      "type": "PKG",
+      "sub_type": "USER",
+      "quota_required": "pkg.user",
+      "display_name": "Business",
+      "pricing_model": "M2M",
+      "subscription_type": "BUSINESS",
+      "quota": {
+        "pkg.user": 100,
+        "phabricator.disk_gb": 500,
+        "artifact.disk_gb": 1000
+      },
+      "date_started": "2016-02-01T00:00:00.000Z",
+      "date_ended": "2030-01-01T00:00:00.000Z"
+    },
+    {
+      "sku": "H-APM-STARTUP",
+      "type": "PKG",
+      "sub_type": "USER",
+      "quota_required": "pkg.user",
+      "display_name": "Startup",
+      "pricing_model": "APM",
+      "subscription_type": "STARTUP",
+      "quota": {
+        "pkg.user": 10,
+        "phabricator.disk_gb": 50,
+        "artifact.disk_gb": 100
+      },
+      "date_started": "2016-02-01T00:00:00.000Z",
+      "date_ended": "2030-01-01T00:00:00.000Z"
+    },
+    {
+      "sku": "H-APM-PROFESSIONAL",
+      "type": "PKG",
+      "sub_type": "USER",
+      "quota_required": "pkg.user",
+      "display_name": "Professional",
+      "pricing_model": "APM",
+      "subscription_type": "PROFESSIONAL",
+      "quota": {
+        "pkg.user": 100,
+        "phabricator.disk_gb": 0,
+        "artifact.disk_gb": 1000,
+        "app.diffusion": 0,
+        "app.differential": 0,
+        "app.audit": 0,
+        "app.maniphest": 0,
+        "app.pholio": 0,
+        "app.phriction": 0,
+        "app.paste": 0,
+        "app.phurl": 0,
+        "app.ponder": 0,
+        "app.legalpad": 0
+      },
+      "date_started": "2016-02-01T00:00:00.000Z",
+      "date_ended": "2030-01-01T00:00:00.000Z"
+    },
+    {
+      "sku": "H-APM-BUSINESS",
+      "type": "PKG",
+      "sub_type": "USER",
+      "quota_required": "pkg.user",
+      "display_name": "Business",
+      "pricing_model": "APM",
+      "subscription_type": "BUSINESS",
+      "quota": {
+        "pkg.user": 100,
+        "phabricator.disk_gb": 500,
+        "artifact.disk_gb": 1000
+      },
+      "date_started": "2016-02-01T00:00:00.000Z",
+      "date_ended": "2030-01-01T00:00:00.000Z"
+    }
+  ]
+}

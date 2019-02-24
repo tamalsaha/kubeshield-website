@@ -1,0 +1,109 @@
+{
+  "hosting": {
+    "headers": [
+      {
+        "headers": [
+          {
+            "key": "X-XSS-Protection",
+            "value": "1; mode=block"
+          },
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
+          }
+        ],
+        "source": "**"
+      },
+      {
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=360000"
+          }
+        ],
+        "source": "@(images|fonts|js_global)/**"
+      },
+      {
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=36000"
+          }
+        ],
+        "source": "@(api)/**"
+      },
+      {
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=300"
+          }
+        ],
+        "source": "404.html"
+      }
+    ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "public": "public",
+    "redirects": [
+      {
+        "source": "/api/",
+        "destination": "/api/v1beta1/",
+        "type": 301
+      },
+      {
+        "source": "/company",
+        "destination": "/about",
+        "type": 301
+      },
+      {
+        "source": "/docs",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/community",
+        "destination": "https://discourse.appscode.com",
+        "type": 301
+      },
+      {
+        "source": "/products/",
+        "destination": "/products/voyager/",
+        "type": 301
+      },
+      {
+        "source": "/products/cloud-deployment",
+        "destination": "/products/pharmer",
+        "type": 301
+      },
+      {
+        "source": "/products/pharmer/docs",
+        "destination": "https://github.com/appscode/pharmer/tree/master/docs",
+        "type": 302
+      },
+      {
+        "source": "/services/",
+        "destination": "/services/tech-support/",
+        "type": 301
+      },
+      {
+        "source": "/products/kubedb/",
+        "destination": "https://kubedb.com/",
+        "type": 301
+      },
+      {
+        "source": "/legal/",
+        "destination": "/legal/tos/",
+        "type": 301
+      },
+      {
+        "source": "/faq/",
+        "destination": "/faq/product/",
+        "type": 301
+      }
+    ]
+  }
+}

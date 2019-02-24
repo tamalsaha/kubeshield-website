@@ -1,0 +1,417 @@
+.onoffswitch {
+  position: relative;
+  width: 100px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.onoffswitch-checkbox {
+  display: none;
+}
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+  content: "Yearly";
+  padding-left: 10px;
+  background-color: $color_ocean_green;
+  color: $white;
+}
+.onoffswitch-inner:after {
+  content: "Monthly";
+  padding-right: 10px;
+  background-color: $color-governor-bay;
+  color: $white;
+  text-align: right;
+}
+.onoffswitch-switch {
+  display: block;
+  width: 18px;
+  margin: 6px;
+  background: $white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 66px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0;
+}
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+  z-index: 3;
+  color: $white;
+  cursor: default;
+  background-color: $color-ocean-green !important;
+  border-color: $startup-plan-bg-color !important;
+}
+.build-agent {
+  margin-top: 0;
+  margin-bottom: 30px;
+  li {
+    a {
+      color: $color-storm-dust;
+      font-size: 14px;
+      font-weight: 600;
+
+      &:hover {
+        z-index: 2;
+        color: $white;
+        background-color: $color_ocean_green;
+        border-color: $color_ocean_green;
+      }
+    }
+  }
+}
+
+// plan csss
+.enterprise-plan {
+  background: $enterprise-plan-bg-color;
+  &:hover {
+    box-shadow: 0 10px 50px 0 $black-20;
+    transition: all .2s ease-in-out;
+  }
+  button {
+    background: $enterprise-plan-button-color;
+    border: 1px solid $enterprise-plan-button-border-color;
+    &:hover {
+      background: $enterprise-plan-bg-color;
+      transition: all .2s ease-in-out;
+    }
+  }
+}
+
+.business-plan {
+  background: $business-plan-bg-color;
+  &:hover {
+    box-shadow: 0 10px 50px 0 $black-20;
+    transition: all .2s ease-in-out;
+  }
+  button {
+    background: $business-plan-button-color;
+    border: 1px solid $business-plan-button-border-color;
+    &:hover {
+      background: $business-plan-bg-color;
+      transition: all .2s ease-in-out;
+    }
+  }
+}
+
+.professional-plan {
+  background: $professional-plan-bg-color;
+  &:hover {
+    box-shadow: 0 10px 50px 0 $black-20;
+    transition: all .2s ease-in-out;
+  }
+  button {
+    background: $professional-plan-button-color;
+    border: 1px solid $professional-plan-button-border-color;
+    &:hover {
+      background: $professional-plan-bg-color;
+      transition: all .2s ease-in-out;
+    }
+  }
+}
+
+.startup-plan {
+  background: $startup-plan-bg-color;
+  &:hover {
+    box-shadow: 0 10px 50px 0 $black-20;
+    transition: all .2s ease-in-out;
+  }
+  button {
+    background: $startup-plan-button-color;
+    border: 1px solid $startup-plan-button-border-color;
+    &:hover {
+      background: $startup-plan-bg-color;
+      transition: all .2s ease-in-out;
+    }
+  }
+}
+
+.best-plan {
+  @media screen and (max-width: 1000px) {
+    margin-top: 30px !important;
+  }
+  margin-top: 5px !important;
+  box-shadow: 0 10px 50px 0 rgba(0, 0, 0, .25);
+  padding-bottom: 43px;
+}
+
+.pricing-table {
+  margin-top: 30px;
+  padding: 40px 25px;
+  color: $white;
+  border-radius: 6px;
+  h1 {
+    color: $white;
+    font-weight: 100;
+    font-size: 70px;
+    line-height: 40px;
+    font-family: Roboto, Arial, sans-serif;
+    span {
+      vertical-align: super;
+      font-size: 35px;
+      font-weight: 100;
+    }
+    &.enterprise {
+      font-size: 50px;
+      line-height: 50px;
+    }
+  }
+  h5 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: $white;
+  }
+  p {
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 500;
+    color: $white;
+    margin-bottom: 0;
+  }
+  a {
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 20px;
+    padding: 8px 18px;
+    outline: 0;
+    display: inline-block;
+    font-weight: 400;
+    color: $white;
+    background: rgba(0, 0, 0, 0.1);
+    &:hover, &:focus {
+      color: $white;
+      text-decoration: none;
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
+  small {
+    font-size: 16px;
+    font-weight: 500;
+    color: $white;
+    margin-bottom: 10px;
+    display: block;
+    span {
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+  }
+}
+
+// feature css
+.feature-includes-title {
+  margin: 80px 0;
+  @media screen and (max-width: 767px) {
+    .table-responsive {
+      width: 100%;
+      margin-bottom: 15px;
+      overflow-x: scroll;
+      border: 1px solid $border-color;
+      display: block;
+      border-top: 0;
+      border-bottom: 0;
+    }
+  }
+
+  .feature-includes {
+    margin: 30px 0 10px 0;
+    thead {
+      border-top: 1px solid $border-color;
+      tr th {
+        padding: 10px;
+        margin: 0;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        border: 1px solid $border-color;
+        background: $color_wild_sand;
+        &:first-child {
+          text-align: left;
+          padding-left: 20px;
+        }
+        &:hover {
+          background: $color_wild_sand;
+        }
+        h3 {
+          font-weight: 600;
+          font-size: 16px;
+          padding: 0;
+          margin: 0;
+          background: $color_wild_sand;
+        }
+      }
+    }
+    tbody {
+      tr td {
+        text-align: center;
+        border: 1px solid $border-color;
+        font-size: 14px;
+        font-weight: 500;
+        &:first-child {
+          text-align: left;
+          padding-left: 20px;
+          font-size: 13px;
+          font-weight: 500;
+        }
+        &:hover {
+          background: transparent;
+        }
+
+        b {
+          font-size: 13px;
+          font-weight: 400;
+        }
+        i {
+          color: $color_ocean_green;
+          font-size: 14px;
+
+          &.not-now {
+            color: $color-razzmatazz;
+          }
+        }
+      }
+    }
+  }
+}
+
+.free-apply {
+  font-size: 12px;
+  font-weight: 400;
+  color: #838ca1;
+
+  &:hover {
+    background: transparent;
+  }
+
+  i {
+    font-size: 12px;
+  }
+}
+
+// start addon pricing
+.addon-pricing {
+  .available-add-ons {
+    color: $available-add-ons-color;
+    height: auto;
+    padding-bottom: 20px;
+    h1 {
+      font-size: 36px;
+      line-height: 45px;
+      margin-bottom: 20px;
+      font-weight: 300;
+      color: #727d98;
+      letter-spacing: 1px;
+      font-family: 'Raleway', sans-serif;
+    }
+  }
+  .additional-pricing {
+    color: $white;
+    border-radius: 6px;
+    padding: 30px;
+    @media screen and (max-width: 1000px) {
+      margin-bottom: 30px;
+    }
+    &.ci-pricing {
+      background: $enterprise-plan-bg-color;
+      p {
+        color: #fff;
+      }
+    }
+    &.kube-pricing {
+      background: $business-plan-bg-color;
+      p {
+        color: #fff;
+      }
+    }
+    &.database-pricing {
+      background: $startup-plan-bg-color;
+      p {
+        color: #fff;
+      }
+    }
+    h3 {
+      font-weight: 400;
+      font-size: 30px;
+      color: $white;
+    }
+    p {
+      font-size: 18px;
+    }
+    a {
+      border-radius: 4px;
+      font-size: 14px;
+      text-align: center;
+      text-transform: capitalize;
+      padding: 8px 18px;
+      outline: 0;
+      display: inline-block;
+      font-weight: 400;
+      color: $white;
+      background: $black-10;
+      &:hover, &:focus {
+        color: $white;
+        text-decoration: none;
+        background: $black-20;
+      }
+    }
+  }
+}
+
+// Professional Services
+.services {
+  margin-top: 40px;
+  text-align: center;
+  img {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  a {
+    padding: 1.5rem 2.3125rem;
+    border-radius: 3.75rem;
+    border: 1px solid #3bb878;
+    color: #3bb878;
+    font-size: 20px;
+    margin-bottom: 0;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 20px;
+    &:hover {
+      background: #3bb878;
+      color: $white;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: all .2s ease-in-out;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+#services-page {
+    margin: 100px 0;
+    z-index: 1;
+    position: relative;
+}
+
+#ser-training-area {
+    position: relative;
+    .ser-training-bg {
+        position: absolute;
+        top: -210px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        div {
+            position: absolute;
+            top: -110px;
+            right: 0;
+            bottom: 0;
+            left: 0px;
+            transform: translate(calc(-40% - 1px),0);
+            background: transparent url(../../images/services/services-bg.svg) no-repeat right top;
+            opacity: 0.2;
+        }
+    }
+    .ser-training-content {
+        .ser-workshop {
+            margin-top: 50px;
+            .ser-workshop-list {
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 30px;
+                    height: 30px;
+                    background-size: 100% 100%!important;
+                }
+                &.git {
+                    &:before{
+                        background-image: url(../../images/services/git.svg);
+                    }
+                }
+                &.ci {
+                    &:before{
+                        background-image: url(../../images/services/ci.svg);
+                    }
+                }
+                &.kubernetes {
+                    &:before{
+                        background-image: url(../../images/services/kubernetes.svg);
+                    }
+                }
+                h3 {
+                    color: #32325d;
+                    font-size: 25px;
+                    line-height: 30px;
+                    font-weight: 500;
+                    text-indent: 50px;
+                    text-transform: capitalize;
+                    padding-top: 0;
+                    margin-top: 0;
+                    margin-bottom: 30px;
+                }
+                p {
+                    color: #32325d;
+                    font-size: 16px;
+                    line-height: 30px;
+                    font-weight: 400;
+                    text-align: justify;
+                }
+            }
+        }
+
+        .workshop-contact-form-content {
+            margin: 50px 0;
+            padding: 20px;
+            text-align: center;
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 10px 40px rgba(41,200,255,0.1);
+            p {
+                color: #32325d;
+                font-weight: 400;
+                margin: 0;
+                align-items: center;
+                display: flex;
+                text-align: left;
+                img {
+                    width: 70px;
+                    height: auto;               
+                }
+                span {
+                    margin: 0 0 0 10px;
+                }
+            }
+        }
+    }
+}

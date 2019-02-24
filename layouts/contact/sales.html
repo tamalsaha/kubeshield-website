@@ -1,0 +1,536 @@
+{{ partial "header.html" .}}
+
+<section class="inner-header-area">
+    {{ partial "menu.html" . }}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="inner-banner">
+                    <h1> Hi, how can we help?</h1>
+                    <p>{{ $.Param "description" }}</p>
+                    <ul class="help-contact">
+                        <li><i class="fa fa-phone"></i>{{ .Site.Params.contact_phone }}</li>
+                        <li><i class="fa fa-envelope"></i>{{ .Site.Params.sales_email }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<span class="hidden" role="ack"></span>
+
+
+<section class="support-contact" id="sales-contact-area">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form id="contact-form">
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <fieldset class="form-group contact-input">
+                                <label for="InputFirstName">First Name
+                                    <small>*</small>
+                                </label>
+                                <input type="text" class="form-control is-required" name="firstname" id="InputFirstName"
+                                       placeholder="e.g John" required>
+                            </fieldset>
+                        </div>
+                        <div class="col-sm-6">
+                            <fieldset class="form-group contact-input">
+                                <label for="InputLastName">Last Name
+                                    <small>*</small>
+                                </label>
+                                <input type="text" class="form-control is-required" id="InputLastName" name="lastname"
+                                       placeholder="e.g doe" required>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <fieldset class="form-group contact-input">
+                                <label for="InputEmail">Your Email
+                                    <small>*</small>
+                                </label>
+                                <input type="email" class="form-control is-required" id="InputEmail" name="email"
+                                       placeholder="e.g john@mail.com" required>
+                            </fieldset>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <fieldset class="form-group contact-input">
+                                <label>Country
+                                    <small>*</small>
+                                </label>
+                                <select class="form-control" name="country">
+                                    <option>United States of America</option>
+                                    <option>Afghanistan</option>
+                                    <option>Åland</option>
+                                    <option>Albania</option>
+                                    <option>Algeria</option>
+                                    <option>American Samoa</option>
+                                    <option>Andorra</option>
+                                    <option>Angola</option>
+                                    <option>Anguilla</option>
+                                    <option>Antarctica</option>
+                                    <option>Antigua and Barbuda</option>
+                                    <option>Argentina</option>
+                                    <option>Armenia</option>
+                                    <option>Aruba</option>
+                                    <option>Australia</option>
+                                    <option>Austria</option>
+                                    <option>Azerbaijan</option>
+                                    <option>Bahamas</option>
+                                    <option>Bahrain</option>
+                                    <option>Bangladesh</option>
+                                    <option>Barbados</option>
+                                    <option>Belarus</option>
+                                    <option>Belgium</option>
+                                    <option>Belize</option>
+                                    <option>Benin</option>
+                                    <option>Bermuda</option>
+                                    <option>Bhutan</option>
+                                    <option>Bolivia</option>
+                                    <option>Bonaire, Sint Eustatius and Saba</option>
+                                    <option>Bosnia and Herzegovina</option>
+                                    <option>Botswana</option>
+                                    <option>Bouvet Island</option>
+                                    <option>Brazil</option>
+                                    <option>British Indian Ocean Territory</option>
+                                    <option>Brunei Darussalam</option>
+                                    <option>Bulgaria</option>
+                                    <option>Burkina Faso</option>
+                                    <option>Burundi</option>
+                                    <option>Cambodia</option>
+                                    <option>Cameroon</option>
+                                    <option>Canada</option>
+                                    <option>Cape Verde</option>
+                                    <option>Cayman Islands</option>
+                                    <option>Central African Republic</option>
+                                    <option>Chad</option>
+                                    <option>Chile</option>
+                                    <option>China</option>
+                                    <option>Christmas Island</option>
+                                    <option>Cocos (Keeling) Islands</option>
+                                    <option>Colombia</option>
+                                    <option>Comoros</option>
+                                    <option>Congo (Brazzaville)</option>
+                                    <option>Congo (Kinshasa)</option>
+                                    <option>Cook Islands</option>
+                                    <option>Costa Rica</option>
+                                    <option>Côted Ivoire</option>
+                                    <option>Croatia</option>
+                                    <option>Curaçao</option>
+                                    <option>Cyprus</option>
+                                    <option>Czech Republic</option>
+                                    <option>Denmark</option>
+                                    <option>Djibouti</option>
+                                    <option>Dominica</option>
+                                    <option>Dominican Republic</option>
+                                    <option>Ecuador</option>
+                                    <option>Egypt</option>
+                                    <option>El Salvador</option>
+                                    <option>Equatorial Guinea</option>
+                                    <option>Eritrea</option>
+                                    <option>Estonia</option>
+                                    <option>Ethiopia</option>
+                                    <option>Falkland Islands</option>
+                                    <option>Faroe Islands</option>
+                                    <option>Fiji</option>
+                                    <option>Finland</option>
+                                    <option>France</option>
+                                    <option>French Guiana</option>
+                                    <option>French Polynesia</option>
+                                    <option>French Southern Lands</option>
+                                    <option>Gabon</option>
+                                    <option>Gambia</option>
+                                    <option>Georgia</option>
+                                    <option>Germany</option>
+                                    <option>Ghana</option>
+                                    <option>Gibraltar</option>
+                                    <option>Greece</option>
+                                    <option>Greenland</option>
+                                    <option>Grenada</option>
+                                    <option>Guadeloupe</option>
+                                    <option>Guam</option>
+                                    <option>Guatemala</option>
+                                    <option>Guernsey</option>
+                                    <option>Guinea</option>
+                                    <option>Guinea-Bissau</option>
+                                    <option>Guyana</option>
+                                    <option>Haiti</option>
+                                    <option>Heard and McDonald Islands</option>
+                                    <option>Honduras</option>
+                                    <option>Hong Kong</option>
+                                    <option>Hungary</option>
+                                    <option>Iceland</option>
+                                    <option>India</option>
+                                    <option>Indonesia</option>
+                                    <option>Iraq</option>
+                                    <option>Ireland</option>
+                                    <option>Isle of Man</option>
+                                    <option>Israel</option>
+                                    <option>Italy</option>
+                                    <option>Jamaica</option>
+                                    <option>Japan</option>
+                                    <option>Jersey</option>
+                                    <option>Jordan</option>
+                                    <option>Kazakhstan</option>
+                                    <option>Kenya</option>
+                                    <option>Kiribati</option>
+                                    <option>Korea, South</option>
+                                    <option>Kuwait</option>
+                                    <option>Kyrgyzstan</option>
+                                    <option>Laos</option>
+                                    <option>Latvia</option>
+                                    <option>Lebanon</option>
+                                    <option>Lesotho</option>
+                                    <option>Liberia</option>
+                                    <option>Libya</option>
+                                    <option>Liechtenstein</option>
+                                    <option>Lithuania</option>
+                                    <option>Luxembourg</option>
+                                    <option>Macau</option>
+                                    <option>Macedonia</option>
+                                    <option>Madagascar</option>
+                                    <option>Malawi</option>
+                                    <option>Malaysia</option>
+                                    <option>Maldives</option>
+                                    <option>Mali</option>
+                                    <option>Malta</option>
+                                    <option>Marshall Islands</option>
+                                    <option>Martinique</option>
+                                    <option>Mauritania</option>
+                                    <option>Mauritius</option>
+                                    <option>Mayotte</option>
+                                    <option>Mexico</option>
+                                    <option>Micronesia</option>
+                                    <option>Moldova</option>
+                                    <option>Monaco</option>
+                                    <option>Mongolia</option>
+                                    <option>Montenegro</option>
+                                    <option>Montserrat</option>
+                                    <option>Morocco</option>
+                                    <option>Mozambique</option>
+                                    <option>Myanmar</option>
+                                    <option>Namibia</option>
+                                    <option>Nauru</option>
+                                    <option>Nepal</option>
+                                    <option>Netherlands</option>
+                                    <option>New Caledonia</option>
+                                    <option>New Zealand</option>
+                                    <option>Nicaragua</option>
+                                    <option>Niger</option>
+                                    <option>Nigeria</option>
+                                    <option>Niue</option>
+                                    <option>Norfolk Island</option>
+                                    <option>Northern Mariana Islands</option>
+                                    <option>Norway</option>
+                                    <option>Oman</option>
+                                    <option>Pakistan</option>
+                                    <option>Palau</option>
+                                    <option>Palestine</option>
+                                    <option>Panama</option>
+                                    <option>PapuaNew Guinea</option>
+                                    <option>Paraguay</option>
+                                    <option>Peru</option>
+                                    <option>Philippines</option>
+                                    <option>Pitcairn</option>
+                                    <option>Poland</option>
+                                    <option>Portugal</option>
+                                    <option>Puerto Rico</option>
+                                    <option>Qatar</option>
+                                    <option>Reunion</option>
+                                    <option>Romania</option>
+                                    <option>Russian Federation</option>
+                                    <option>Rwanda</option>
+                                    <option>Saint Barthélemy</option>
+                                    <option>Saint Helena</option>
+                                    <option>Saint Kitts and Nevis</option>
+                                    <option>Saint Lucia</option>
+                                    <option>Saint Martin (French part)</option>
+                                    <option>Saint Pierre and Miquelon</option>
+                                    <option>Saint Vincent and the Grenadines</option>
+                                    <option>Samoa</option>
+                                    <option>San Marino</option>
+                                    <option>Sao Tome and Principe</option>
+                                    <option>Saudi Arabia</option>
+                                    <option>Senegal</option>
+                                    <option>Serbia</option>
+                                    <option>Seychelles</option>
+                                    <option>Sierra Leone</option>
+                                    <option>Singapore</option>
+                                    <option>Sint Maarten (Dutch part)</option>
+                                    <option>Slovakia</option>
+                                    <option>Slovenia</option>
+                                    <option>Solomon Islands</option>
+                                    <option>Somalia</option>
+                                    <option>South Africa</option>
+                                    <option>South Georgia and South Sandwich Islands</option>
+                                    <option>South Sudan</option>
+                                    <option>Spain</option>
+                                    <option>Sri Lanka</option>
+                                    <option>Suriname</option>
+                                    <option>Svalbard and Jan Mayen Islands</option>
+                                    <option>Swaziland</option>
+                                    <option>Sweden</option>
+                                    <option>Switzerland</option>
+                                    <option>Taiwan</option>
+                                    <option>Tajikistan</option>
+                                    <option>Tanzania</option>
+                                    <option>Thailand</option>
+                                    <option>Timor-Leste</option>
+                                    <option>Togo</option>
+                                    <option>Tokelau</option>
+                                    <option>Tonga</option>
+                                    <option>Trinidad and Tobago</option>
+                                    <option>Tunisia</option>
+                                    <option>Turkey</option>
+                                    <option>Turkmenistan</option>
+                                    <option>Turks and Caicos Islands</option>
+                                    <option>Tuvalu</option>
+                                    <option>Uganda</option>
+                                    <option>Ukraine</option>
+                                    <option>United Arab Emirates</option>
+                                    <option>United Kingdom</option>
+                                    <option>United States Minor Outlying Islands</option>
+                                    <option>Uruguay</option>
+                                    <option>Uzbekistan</option>
+                                    <option>Vanuatu</option>
+                                    <option>Vatican City</option>
+                                    <option>Venezuela</option>
+                                    <option>Vietnam</option>
+                                    <option>Virgin Islands, British</option>
+                                    <option>Virgin Islands, U.S.</option>
+                                    <option>Wallis and Futuna Islands</option>
+                                    <option>Western Sahara</option>
+                                    <option>Yemen</option>
+                                    <option>Zambia</option>
+                                    <option>Zimbabwe</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                        <div class="col-sm-6">
+                            <fieldset class="form-group contact-input">
+                                <label>Company Name
+                                    <small>*</small>
+                                </label>
+                                <input type="text" class="form-control is-required" name="companyname"
+                                       placeholder="Company Name" required>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <fieldset class="form-group contact-input">
+                                <label for="Inputjob">Job Title
+                                    <small>*</small>
+                                </label>
+                                <input type="text" class="form-control is-required" id="Inputjob" name="jobtitle"
+                                       placeholder="Job Title" required>
+                            </fieldset>
+                        </div>
+                        <div class="col-sm-6">
+                            <fieldset class="form-group contact-input">
+                                <label>Current cloud provider
+                                    <small>*</small>
+                                </label>
+                                <select class="form-control" name="cloudprovider">
+                                    <option>AWS</option>
+                                    <option>Google Cloud</option>
+                                    <option>Digitalocean</option>
+                                    <option>Linode</option>
+                                    <option>Someother cloud provider</option>
+                                    <option>Not using any cloud provider</option>
+                                    <option>Using on-premise datacenter</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <fieldset class="form-group contact-input">
+                                <label>Current number of Employees
+                                    <small>*</small>
+                                </label>
+                                <select class="form-control" name="employees">
+                                    <option>1 - 10 Employees</option>
+                                    <option>20 - 100 Employees</option>
+                                    <option>100 - 1000 Employees</option>
+                                    <option>1000+ Employees</option>
+                                </select>
+                            </fieldset>
+                        </div>
+                        <div class="col-sm-6">
+                            <fieldset class="form-group contact-input">
+                                <label for="phone">Phone
+                                    <small>*</small>
+                                </label>
+                                <input type="number" class="form-control is-required" id="phone" name="phone"
+                                       placeholder="+88 021-213-5553" required>
+                            </fieldset>
+
+                            <style>
+                                .contact-input input[type=number]::-webkit-inner-spin-button, 
+                                .contact-input input[type=number]::-webkit-outer-spin-button { 
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+                                    margin: 0; 
+                                }
+                            </style>
+                        </div>
+                    </div>
+                    <!--./end row-->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <fieldset class="form-group contact-input">
+                                <label for="message">What are you looking for? (max 500 chars)
+                                    <small>*</small>
+                                </label>
+                                <textarea id="form_message" class="form-control is-required" rows="12" id="message"
+                                          name="message" maxlength="500" placeholder="Please leave us a message"
+                                          required></textarea>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <!--./ end row-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="g-recaptcha contact-page-reCAPTCHA"
+                                 data-sitekey="6Lfvmx8TAAAAAIzqTvXSXy3oYO8PvnWcgBJqPbEo"></div>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <button type="submit" class="contact-submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section id="successful">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mail-successful-message text-center">
+                    <img src="/images/contact/success.svg">
+                    <h2>Your message sent successfully</h2>
+                    <p>Thanks for contacting us. We'll get back to you shortly!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="failed">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mail-successful-message text-center">
+                    <img src="/images/contact/failed.svg">
+                    <h2>Ooh! Something is wrong</h2>
+                    <p>Failed to connect to api server. Please try again later</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ partial "social.html" . }}
+
+
+<script>
+  $(document).ready(function () {
+    $.QueryString = (function (a) {
+      if (a == "") return {};
+      var b = {};
+      for (var i = 0; i < a.length; ++i) {
+        var p = a[i].split('=');
+        if (p.length != 2) continue;
+        b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+      }
+      return b;
+    })(window.location.search.substr(1).split('&'));
+
+    $.fn.serializeFormJSON = function () {
+      var o = {};
+      var a = this.serializeArray();
+      $.each(a, function () {
+        if (o[this.name]) {
+          if (!o[this.name].push) {
+            o[this.name] = [o[this.name]];
+          }
+          o[this.name].push(this.value || '');
+        } else {
+          o[this.name] = this.value || '';
+        }
+      });
+      return o;
+    };
+
+    $('#successful').hide();
+    $('#failed').hide();
+
+    $('.contact-submit').on('click', function (e) {
+      e.preventDefault();
+
+      const isValid = $('#contact-form').valid();
+      console.log('isValid: ', isValid);
+      const gRecaptchaJson = $('#g-recaptcha-response').val();
+      if (isValid && gRecaptchaJson) {
+        const data = $('#contact-form').serializeFormJSON();
+        const url = 'https://annex.appscode.com/apis/mail/v1alpha1/json';
+        const sender_name = data.firstname + ' ' + data.lastname;
+        const subject = data.firstname + ' ' + data.lastname + ' from ' + data.companyname;
+        const body = data.message + '\n\n'
+          + sender_name + '\n'
+          + data.jobtitle + '\n'
+          + 'Email: ' + data.email + '\n'
+          + 'Phone: ' + data.phone + '\n'
+          + 'Company: ' + data.companyname + ' (' + data.employees + ')' + '\n'
+          + 'Location: ' + data.country + '\n'
+          + 'Currently using: ' + data.cloudprovider + '\n'
+          + 'Interested in:' + ($.QueryString.product || '');
+        const req = {
+          sender_name: sender_name,
+          sender_email: data.email,
+          subject: subject,
+          body: body,
+          receiver_email: 'sales@appscode.com'
+        };
+        console.log('data: ', data);
+        $.ajax({
+          url: url,
+          crossDomain: true,
+          type: 'POST',
+          dataType: 'JSON',
+          data: JSON.stringify(req),
+          success(resp) {
+           $('#sales-contact-area').attr('style','display: none;');
+           $('#successful').show(); // $('span[role="ack"]').text("Thanks for contacting us. We'll get back to you shortly!").toggleClass('hidden');
+          },
+          error(xhr, status, err) {
+            $('#sales-contact-area').attr('style','display: none;');
+            $('#failed').show(); // $('span[role="ack"]').text('Failed to connect to api server. Please try again later.').toggleClass('hidden');
+            console.log('status: ', status, 'err: ', err);
+          }
+        });
+      }
+    });
+  });
+</script>
+
+{{ partial "footer.html" . }}

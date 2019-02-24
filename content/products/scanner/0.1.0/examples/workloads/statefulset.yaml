@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: hello-statefulset
+  namespace: kube-system
+spec:
+  selector:
+    matchLabels:
+      app: scanner
+  serviceName: "hello-service"
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: scanner
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: hello
+        image: shudipta/hello:test
+        ports:
+        - containerPort: 80
+          name: web

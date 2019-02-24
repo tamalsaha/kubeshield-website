@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: hello-daemonset
+  namespace: kube-system
+  labels:
+    app: scanner
+spec:
+  selector:
+    matchLabels:
+      app: scanner
+  template:
+    metadata:
+      labels:
+        app: scanner
+    spec:
+      containers:
+      - name: hello
+        image: shudipta/hello:test
+        ports:
+        - containerPort: 80

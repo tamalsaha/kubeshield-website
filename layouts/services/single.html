@@ -1,0 +1,33 @@
+{{ partial "header.html" .}}
+
+<section class="inner-header-area">
+    {{ partial "menu.html" . }}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="inner-banner">
+                    <h1>Code · Test · Deploy · Run</h1>
+                    <p>Integrated DevOps Cloud for Containerized Apps</p>
+                    <a class="request-demo" href="/contact/sales/?product=PrivateInstallation">REQUEST A DEMO</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ if and (isset .Params "show_section_menu") ( .Params.show_section_menu ) }}
+{{ partial "global-section-menu.html" . }}
+<!-- {{ partial "section-menu.html" . }} -->
+{{ end }}
+
+
+{{ .Content }}
+
+<div class="clearfix"></div>
+
+<!-- {{ partial "testimonials.html" .}} -->
+
+{{ partial "schedule.html" . }}
+
+
+{{ partial "footer.html" . }}
