@@ -1,0 +1,197 @@
+
+{{ partial "header.html" .}}
+
+<section class="inner-header-area">
+    {{ partial "menu.html" . }}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="inner-banner">
+                    <h1> Hi, how can we help?</h1>
+                    <p>{{ $.Param "description" }}</p>
+                    <ul class="help-contact">
+                        <li><i class="fa fa-phone"></i>{{ .Site.Params.contact_phone }}</li>
+                        <li><i class="fa fa-envelope"></i>{{ .Site.Params.contact_email }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<span class="hidden" role="ack"></span>
+
+<section class="support-contact" id="support-contact-area">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form id="contact-form">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <fieldset class="form-group contact-input">
+                                <label for="form_firstname">First Name
+                                    <small>*</small>
+                                </label>
+                                <input id="form_firstname" type="text" name="firstname" class="form-control"
+                                       placeholder="e.g John" required
+                                       data-error="Firstname is required.">
+                            </fieldset>
+                        </div>
+                        <div class="col-sm-6">
+                            <fieldset class="form-group contact-input">
+                                <label for="form_lastname">Last Name
+                                    <small>*</small>
+                                </label>
+                                <input id="form_lastname" type="text" name="lastname" class="form-control"
+                                       placeholder="e.g Doe" required
+                                       data-error="Lastname is required.">
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <fieldset class="form-group contact-input">
+                                <label for="form_email">Email
+                                    <small>*</small>
+                                </label>
+                                <input id="form_email" type="email" name="email" class="form-control"
+                                       placeholder="e.g john@mail.com" required
+                                       data-error="Valid email is required.">
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <fieldset class="form-group contact-input">
+                                <label for="form_subject">Subject
+                                    <small>*</small>
+                                </label>
+                                <input id="form_subject" type="text" name="subject" class="form-control"
+                                       placeholder="e.g i need help" maxlength="50" required
+                                       data-error="Valid email is required.">
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <fieldset class="form-group contact-input">
+                                <label for="form_message">Message (max 500 chars)
+                                    <small>*</small>
+                                </label>
+                                <textarea id="form_message" name="message" class="form-control"
+                                          placeholder="e.g hi appscode i need help" maxlength="500" rows="6" required
+                                          data-error="Please leave us a message"></textarea>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="g-recaptcha contact-page-reCAPTCHA"
+                                 data-sitekey="6Lfvmx8TAAAAAIzqTvXSXy3oYO8PvnWcgBJqPbEo"></div>
+                        </div>
+                        <div class="col-sm-6 text-center">
+                            <button type="submit" class="contact-submit"> Get in touch</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="successful">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mail-successful-message text-center">
+                    <img src="/images/contact/success.svg">
+                    <h2>Your message sent successfully</h2>
+                    <p>Thanks for contacting us. We'll get back to you shortly!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="failed">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mail-successful-message text-center">
+                    <img src="/images/contact/failed.svg">
+                    <h2>Ooh! Something is wrong</h2>
+                    <p>Failed to connect to api server. Please try again later</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{ partial "social.html" . }}
+
+
+<script>
+  $(document).ready(function () {
+
+    $('#successful').hide();
+    $('#failed').hide();
+
+    $('.contact-submit').on('click', function (e) {
+      e.preventDefault();
+      $.fn.serializeFormJSON = function () {
+        var o = {};
+        var a = this.serializeArray();
+        $.each(a, function () {
+          if (o[this.name]) {
+            if (!o[this.name].push) {
+              o[this.name] = [o[this.name]];
+            }
+            o[this.name].push(this.value || '');
+          } else {
+            o[this.name] = this.value || '';
+          }
+        });
+        return o;
+      };
+
+      const isFormValid = $('form').valid();
+      const gRecaptchaJson = $('#g-recaptcha-response').val();
+      if (isFormValid && gRecaptchaJson) {
+        const data = $('#contact-form').serializeFormJSON();
+        const req = {
+          sender_name: data.firstname + ' ' + data.lastname,
+          sender_email: data.email,
+          subject: data.subject,
+          body: data.message,
+          receiver_email: 'support@appscode.com'
+        };
+
+        const url = 'https://annex.appscode.com/apis/mail/v1alpha1/json';
+        // const url = 'http://localhost:9877/appscode/api/mail/v1beta1';
+        $.ajax({
+          url: url,
+          crossDomain: true,
+          type: 'POST',
+          dataType: 'JSON',
+          data: JSON.stringify(req),
+          success(resp) {
+            $('#support-contact-area').attr('style','display: none;');
+            $('#successful').show();
+            // $('span[role="ack"]').text("Thanks for contacting us. We'll get back to you shortly!").toggleClass('hidden');
+          },
+          error(xhr, status, err) {
+            $('#support-contact-area').attr('style','display: none;');
+            $('#failed').show();
+            // $('span[role="ack"]').text('Failed to connect to api server. Please try again later.').toggleClass('hidden');
+            console.log('status: ', status, 'err: ', err);
+          }
+        });
+      }
+    });
+  });
+</script>
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,129 @@
+<section id="ac-testimonials-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="ac-testimonials-left">
+
+                    <div class="ac-testimonials">
+                        <ul class="quotes-slider">
+                            <li>
+                                <div class="ac-testimonials-list">
+                                    <div class="ac-author-user">
+                                        <img src="/images/ac-tisti-author.jpg">
+                                        <div class="ac-author">
+                                            <h4>Sanjidul Hoque</h4>
+                                            <p>CEO @Google.inc.</p>
+                                        </div>
+                                    </div>
+                                    <div class="ac-author-content">
+                                        <p>'I have been looking for a modern and efficient software development platform
+                                            that could support the development of my business. I'm just wondering why
+                                            AppsCode did not exist before!'</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="ac-testimonials-list">
+                                    <div class="ac-author-user">
+                                        <img src="/images/ac-tisti-author.jpg">
+                                        <div class="ac-author">
+                                            <h4>Sajib Khan</h4>
+                                            <p>CEO @Google.inc.</p>
+                                        </div>
+                                    </div>
+                                    <div class="ac-author-content">
+                                        <p>'I have been looking for a modern and efficient software development platform
+                                            that could support the development of my business. I'm just wondering why
+                                            AppsCode did not exist before!'</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <section class="ac-customers">
+                        <ul class="customers-slider">
+                            <li><a href="https://www.google.com/" target="_blank" rel="nofollow">
+                                <img src="/images/client-logo/google.png"/></a>
+                            </li>
+                            <li><a href="https://www.slack.co/" target="_blank" rel="nofollow">
+                                <img src="/images/client-logo/slack.png"/></a>
+                            </li>
+                            <li><a href="https://www.shopify.com/" target="_blank" rel="nofollow">
+                                <img src="/images/client-logo/shopify.png"/></a>
+                            </li>
+                            <li><a href="https://www.google.com/" target="_blank" rel="nofollow">
+                                <img src="/images/client-logo/google.png"/></a>
+                            </li>
+                            <li><a href="https://www.slack.co/" target="_blank" rel="nofollow">
+                                <img src="/images/client-logo/slack.png"/></a>
+                            </li>
+                            <li><a href="https://www.shopify.com/" target="_blank" rel="nofollow">
+                                <img src="/images/client-logo/shopify.png"/></a>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="customers-stories">
+                    <h1>Customers Stories</h1>
+                    <p>Join hundreds of Platform who switched to AppsCode</p>
+                    <a class="btn-customers-stories" href="https://discourse.appscode.com/">Join Our Community</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+
+
+
+
+    $(".customers-slider").length > 0 && $(".customers-slider").slick({
+        infinite: !0,
+        autoplay: !0,
+        autoplaySpeed: 2000,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-prev"><img src="/images/ac_arrow-left3.svg" /></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="/images/ac_arrow-right3.svg" /></button>',
+        responsive: [{
+            breakpoint: 1800,
+            settings: {
+                slidesToShow: 3
+            }
+        }, {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1
+            }
+        }]
+    }),
+
+
+    $(".quotes-slider").length > 0 && $(".quotes-slider").slick({
+        infinite: !0,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '<button type="button" class="slick-prev"><img src="/images/ac_arrow-left3.svg" /></button>',
+        nextArrow: '<button type="button" class="slick-next"><img src="/images/ac_arrow-right3.svg" /></button>',
+        responsive: [{
+            breakpoint: 769,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        }, {
+            breakpoint: 640,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }]
+    });
+
+
+</script>

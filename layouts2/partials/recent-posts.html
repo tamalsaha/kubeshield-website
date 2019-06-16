@@ -1,0 +1,32 @@
+<div class="recent-posts">
+    <h3>Read similar posts below.</h3>
+    <ul>
+        <li>
+            <div class="col-md-6">
+                <div class="blog-list">
+                    <a href="{{ .Page.RelPermalink }}">
+                        {{ if isset .Page.Params "image" }}
+                        <div class="post-img">
+                            <img alt="" src="{{ .Page.Params.image }}">
+                        </div>
+                        {{ else }}
+                        <img class=" border-img-hover" alt="" src="{{ .Page.Params.preview }}">
+                        {{ end }}
+                    </a>
+                    <p class="post-meta">
+                        <b>on</b> Mon, Aug 1, 2016
+                    </p>
+                    <div class="post-description">
+                        <a class="blog-title" href="{{ .Page.RelPermalink }}"><h3>{{ .Page.Title }}</h3></a>
+                        {{ .Page.Summary }}
+                        <div class="blog-categories">
+                            {{ partial "categories.html" .Page }}
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </li>
+
+    </ul>
+
+</div>

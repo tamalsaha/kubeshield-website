@@ -1,0 +1,64 @@
+<div class="main-menu">
+  <div class=""><!--./container-->
+    <nav id="ac-top-nav" class="navbar top-nav navbar-expand-lg navbar-dark bg-faded" data-toggle="affix" data-offset-top="90"> <!--./navbar-light bg-light-->
+      <!-- <a class="navbar-brand" href="#">AppsCode</a> -->
+      <a class="navbar-brand" href="/">
+        <img class="logo" src="/images/logo.svg" alt="AppsCode">
+        <img class="affix-logo" src="/images/logo-color.svg" alt="AppsCode">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <span class="navbar-toggler-icon"></span> -->
+        <span>
+          <i class="fa fa-bars"></i>
+        </span>
+      </button>
+    
+      <div class="collapse navbar-collapse main-menu-item" id="main-menu">
+        <div class="mr-auto"></div>
+        <ul class="navbar-nav my-2 my-lg-0">
+            {{ $currentNode := . }}
+            {{ $productName := .Params.product_name }}
+            {{ range $key, $value := (.Site.Menus.main) }}
+
+              {{ if .HasChildren }}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Products
+                </a>
+                <!-- <div class="ob-dropdown-arrow " style="transform: translateX(50px) rotate(45deg);"></div>                 -->
+                <div class="dropdown-menu ac-top-menu-dropdown" aria-labelledby="navbarDropdown">
+                  {{ range .Children }}
+                    <a class="dropdown-item {{ if eq $productName .Identifier}} active {{ end }}" href="{{.URL}}"> {{ .Name }}</a>
+                  {{ end }}
+                </div>
+              </li>
+            {{else}}
+            <li class="nav-item">
+              <a class="nav-link {{if or ($currentNode.IsMenuCurrent "main" .) (eq (lower $currentNode.Section) (lower .Name)) }} active{{end}}" href="{{.URL}}">{{ .Name }}</a>
+            </li>
+
+            {{end}}
+          {{end}}
+          <li class="nav-item">
+            <a class="nav-link join_us" href="https://discourse.appscode.com/" target="_blank" class="btn btn-white">Forum &nbsp<img src="/images/discourse.png"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link join_us" href="https://slack.appscode.com/" target="_blank" class="btn btn-white">Chat &nbsp<img src="/images/slack.png"></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<script>
+$(window).on('scroll', function(event) {
+    var scrollValue = $(window).scrollTop();
+    if (scrollValue > 10) {
+      $('#ac-top-nav').addClass('affix');
+    } else if (scrollValue < 11) {
+      $('#ac-top-nav').removeClass('affix');
+    }
+});
+</script>

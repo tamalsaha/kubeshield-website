@@ -1,0 +1,47 @@
+{{ partial "header.html" }}
+
+{{ $productName := .Params.product_name }}
+
+<section class="inner-header-area">
+    {{ partial "menu.html" . }}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="inner-banner">
+                    <h1>{{ title (default .Title (index .Params "header")) }}</h1>
+                    <p>{{ $.Param "description" }}</p>
+
+                    {{ if and $productName (isset $.Site.Data.products.products $productName) }}
+
+                      {{ $latestVersion := (index $.Site.Data.products.products $productName "latestVersion") }}
+                      <a href="/products/{{ $productName }}/{{ $latestVersion }}/" class="docs"> <i class="fa fa-file-text-o"> </i>View Docs</a>
+
+                    {{ else }}
+                      <a href="{{ .Params.docs_url }}" class="docs"  target="_blank"> <i class="fa fa-file-text-o"> </i>View Docs</a>
+                    {{ end }}
+
+                    {{ if .Params.helm_url }}
+                    <a class="helm" href="{{ .Params.helm_url }}" target="_blank"> <img src="/images/helm_logo.png"> Helm Charts</a>
+                    {{ end }}
+
+                    <a class="github" href="{{ .Params.github_url }}" target="_blank"><i class="fa fa-github"> </i>Github </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                {{ .Content }}
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ partial "schedule.html" . }}
+
+{{ partial "footer.html" . }}

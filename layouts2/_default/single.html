@@ -1,0 +1,132 @@
+{{ partial "header.html" . }}
+
+<section class="inner-header-area">
+  {{ partial "menu.html" . }}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="inner-banner">
+          <h1>{{ title (default .Title (index .Params "header")) }}</h1>
+          <p>{{ $.Param "description" }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="default">
+  <div class="container">
+    <div class="default-sidbar">
+      <div class="row">
+       <div class="default-sidbar-left">
+         <div class="col-md-12">
+           <div id="custom-search-input">
+             <div class="input-group">
+               <input type="text" class="search-query form-control" placeholder="Search" onkeydown="if (event.keyCode==13) window.location.replace('/search/?q=' + this.value)" />
+                  <span class="input-group-btn">
+                      <button class="btn btn-danger" type="button">
+                        <i class="fa fa-search" onclick="window.location.replace('/search/?q=' + $('.search-query').val())"></i>
+                      </button>
+                  </span>
+             </div>
+           </div>
+
+           {{ if isset .Params "option_menu" }}
+           <select class="form-control select-nav selectpicker"id="docs-option-menu">
+             {{ $option_selection := .Params.option_menu_selection }}
+             {{ range (index .Site.Menus .Params.option_menu) }}
+             <option value="{{ .URL }}" {{ if eq $option_selection .Identifier }}selected {{ $.Scratch.Add "home_name" .Name }} {{ $.Scratch.Add "home_url" .URL }} {{ end }}>{{ .Name }}</option>
+             {{ end }}
+           </select>
+           <script type="text/javascript">
+             $(document).ready( function() {
+               $('#docs-option-menu').change( function() {
+                 location.href = $(this).val();
+               });
+             });
+           </script>
+           {{ else }}
+           {{ if isset .Params "home_name"}} {{ $.Scratch.Add "home_name" (index .Params "home_name") }} {{ end }}
+           {{ if isset .Params "home_url"}}  {{ $.Scratch.Add "home_url" (index .Params "home_url") }}   {{ end }}
+           {{ end }}
+
+           {{ if isset .Params "left_menu" }}
+           <ul class="sub-nav">
+             {{ $currentNode := . }}
+             {{ $menu := .Params.left_menu }}
+             {{ range (index .Site.Menus .Params.left_menu) }}
+             <li>
+               {{ if .HasChildren }}
+               <a href="#{{ .Identifier }}" class="" data-toggle="collapse"><i class="fa fa-angle-double-right"></i>{{ .Name }}</a>
+               <ul class="{{if $currentNode.HasMenuCurrent $menu . }}collapse in{{else}}collapse{{end}} sub-nav" id="{{ .Identifier }}">
+                 {{ range .Children }}
+                 <li><a href="{{ .URL }}" {{if $currentNode.IsMenuCurrent $menu . }}class="active"{{end}}><i class="fa fa-angle-double-right"></i>{{ .Name }}</a></li>
+                 {{ end }}
+               </ul>
+               {{ else }}
+               <a href="{{ .URL }}" {{if $currentNode.IsMenuCurrent $menu . }}class="active"{{end}}><i class="fa fa-angle-double-right"></i>{{ .Name }}</a>
+               {{ end }} <!-- end of menu item rendering -->
+             </li>
+             {{ end }} <!-- end of left_menu rendering -->
+           </ul>
+           {{ end }} <!-- end of left_menu -->
+         </div>
+       </div>
+      </div>
+    </div> <!-- ./ default-sidbar -->
+    <div class="default-content">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- don't show "Back to" link on home page. -->
+          {{ range $index, $element := .Params.menu }}
+            {{ range $k, $v := $element }}
+              {{ if and (eq $index $.Section) (eq $k "identifier") }}
+                {{ $.Scratch.Add "home_id" (index $element "identifier") }}
+              {{ end }}
+            {{ end }}
+          {{end}}
+          {{ if and ($.Scratch.Get "home_url") (ne (index .Params "option_menu_selection") ($.Scratch.Get "home_id")) }}
+          <div class="docs-home">
+            <a href="{{ $.Scratch.Get "home_url" }}"><i class="fa fa-mail-reply"></i>Back to {{ $.Scratch.Get "home_name" }}</a>
+          </div>
+          {{ end }}
+          <article class="article">
+
+            <!-------------------------------->
+
+            {{ .Content }}
+
+            <!-------------------------------->
+
+          </article>
+        </div>
+      </div>
+    </div><!-- ./ default-content -->
+  </div><!-- ./ container -->
+</section>
+
+
+
+{{ partial "subscribers.html" . }}
+
+
+
+{{if in .Params.blackfriday.extensions "autoHeaderIds"}}
+<script language="javascript" type="text/javascript">
+  $(document).ready(function () {
+    function headerLink() {
+      if ($(this).context.id) {
+        $(this).prepend('<a href=#' + $(this).context.id + ' style="padding:60px 0 10px 0;"><i class="fa fa-link" aria-hidden="true"></i>&nbsp;</a>');
+      }
+    }
+    //$('h1').each(headerLink);
+    $('h2').each(headerLink);
+    $('h3').each(headerLink);
+    $('h4').each(headerLink);
+    $('h5').each(headerLink);
+  });
+</script>
+{{end}}
+
+{{ partial "footer.html" . }}

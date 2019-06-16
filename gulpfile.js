@@ -180,7 +180,7 @@ gulp.task('scss', function() {
 
   return merge(scssStream, cssextStream)
     .pipe(concat('style.min.css'))
-    .pipe(cleanCSS({compatibility: 'ie8'}))
+    // .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(rev())
     .pipe(gulp.dest(paths.scss.destDir))
     .pipe(rev.manifest({

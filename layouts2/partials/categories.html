@@ -1,0 +1,11 @@
+
+<ul>
+    {{ range .Params.categories }}
+    <li>
+        <a href="/categories/{{ urlize . }}">
+            {{ title . }}
+            <!--<span class="badge pull-right">{{ $.Site.Taxonomies.categories.Count (urlize .) }}</span>-->
+        </a>
+    </li>
+    {{ end }}
+</ul>

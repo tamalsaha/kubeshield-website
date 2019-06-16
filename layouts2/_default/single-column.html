@@ -1,0 +1,33 @@
+{{ partial "header.html" .}}
+
+<section class="inner-header-area">
+    {{ partial "menu.html" . }}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="inner-banner">
+                    <h1>{{ title (default .Title (index .Params "header")) }}</h1>
+                    <p>{{ $.Param "description" }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- /End of Home Section -->
+<section class="list-single-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <article class="article">
+                    {{ .Content }}
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr>
+{{ partial "subscribers.html" . }}
+
+{{ partial "footer.html" . }}

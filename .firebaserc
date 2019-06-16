@@ -1,7 +1,14 @@
 {
   "projects": {
-    "dev": "tigerworks-kube",
-    "prod": "appscode-domains",
-    "default": "tigerworks-kube"
+    "default": "appscode-domains"
+  },
+  "targets": {
+    "appscode-domains": {
+      "hosting": {
+        "hugo": [
+          "kubeshield-prod"
+        ]
+      }
+    }
   }
 }
